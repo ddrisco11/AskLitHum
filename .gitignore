@@ -4,3 +4,8 @@ __pycache__/
 *.pyc
 .venv/
 venv/
+
+# local run artifacts
+*.log
+test_e2e.stdout
+test_e2e_q1.json

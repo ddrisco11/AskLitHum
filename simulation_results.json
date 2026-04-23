@@ -1,0 +1,5170 @@
+{
+  "config": {
+    "retrieve_n": 6,
+    "top_k": 3,
+    "queries_per_category": 50,
+    "generator": "google/flan-t5-base",
+    "embedder": "all-MiniLM-L6-v2",
+    "seed": 17
+  },
+  "figures": {
+    "Inferno": "Dante",
+    "Confessions": "Augustine",
+    "Pride and Prejudice": "Elizabeth Bennet",
+    "King Lear": "King Lear",
+    "Anna Karenina": "Anna Karenina",
+    "Montaigne Essays": "Montaigne"
+  },
+  "stats": {
+    "total_queries": 300,
+    "per_category": {
+      "Human condition & identity": {
+        "Anna Karenina": 10,
+        "Augustine": 11,
+        "Montaigne": 26,
+        "Dante": 1,
+        "Elizabeth Bennet": 2
+      },
+      "Social & cultural structures": {
+        "Augustine": 6,
+        "Montaigne": 24,
+        "Anna Karenina": 17,
+        "Elizabeth Bennet": 3
+      },
+      "Existential / philosophical": {
+        "Augustine": 24,
+        "Montaigne": 14,
+        "Anna Karenina": 12
+      },
+      "Interpersonal relationships": {
+        "Anna Karenina": 23,
+        "Augustine": 5,
+        "Elizabeth Bennet": 8,
+        "Montaigne": 14
+      },
+      "Conflict & struggle": {
+        "Anna Karenina": 22,
+        "Montaigne": 16,
+        "Augustine": 11,
+        "Elizabeth Bennet": 1
+      },
+      "Moral / ethical questions": {
+        "Anna Karenina": 15,
+        "Montaigne": 25,
+        "Augustine": 7,
+        "Elizabeth Bennet": 3
+      }
+    },
+    "overall": {
+      "Anna Karenina": 99,
+      "Augustine": 64,
+      "Montaigne": 119,
+      "Dante": 1,
+      "Elizabeth Bennet": 17
+    },
+    "no_majority_top_k": 40,
+    "mean_top1_cosine": 0.4147
+  },
+  "results": [
+    {
+      "category": "Human condition & identity",
+      "query": "What kind of relationship can people develop if they are in an emotional state of loss?",
+      "top_sources": [
+        "Anna Karenina",
+        "Anna Karenina",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.447,
+        0.4246,
+        0.4146
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 3
+    },
+    {
+      "category": "Human condition & identity",
+      "query": "How do we see each other?",
+      "top_sources": [
+        "Confessions",
+        "Anna Karenina",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.3977,
+        0.3254,
+        0.3206
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 2
+    },
+    {
+      "category": "Human condition & identity",
+      "query": "What is the first step in living our own life?",
+      "top_sources": [
+        "Anna Karenina",
+        "Anna Karenina",
+        "Confessions"
+      ],
+      "top_scores": [
+        0.4296,
+        0.4202,
+        0.4122
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 2
+    },
+    {
+      "category": "Human condition & identity",
+      "query": "How can one express what we perceive and experience?",
+      "top_sources": [
+        "Confessions",
+        "Confessions",
+        "Confessions"
+      ],
+      "top_scores": [
+        0.4892,
+        0.4891,
+        0.4687
+      ],
+      "chosen_source": "Confessions",
+      "chosen_figure": "Augustine",
+      "dominance": 3
+    },
+    {
+      "category": "Human condition & identity",
+      "query": "What is the most important aspect about identity?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Montaigne Essays",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.3523,
+        0.3461,
+        0.3333
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 3
+    },
+    {
+      "category": "Human condition & identity",
+      "query": "What is the meaning of a person's identity?",
+      "top_sources": [
+        "Anna Karenina",
+        "Confessions",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.3418,
+        0.3349,
+        0.3339
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 2
+    },
+    {
+      "category": "Human condition & identity",
+      "query": "How do we learn to recognize the difference between good and bad?",
+      "top_sources": [
+        "Confessions",
+        "Montaigne Essays",
+        "Confessions"
+      ],
+      "top_scores": [
+        0.3868,
+        0.3851,
+        0.3812
+      ],
+      "chosen_source": "Confessions",
+      "chosen_figure": "Augustine",
+      "dominance": 2
+    },
+    {
+      "category": "Human condition & identity",
+      "query": "What is the true identity of all human beings?",
+      "top_sources": [
+        "Confessions",
+        "Montaigne Essays",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.3714,
+        0.3663,
+        0.3623
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 2
+    },
+    {
+      "category": "Human condition & identity",
+      "query": "Is life a journey of self discovery, or a journey of self creation?",
+      "top_sources": [
+        "Anna Karenina",
+        "Confessions",
+        "Confessions"
+      ],
+      "top_scores": [
+        0.4452,
+        0.4179,
+        0.3886
+      ],
+      "chosen_source": "Confessions",
+      "chosen_figure": "Augustine",
+      "dominance": 2
+    },
+    {
+      "category": "Human condition & identity",
+      "query": "How does being alive change your life?",
+      "top_sources": [
+        "Anna Karenina",
+        "Montaigne Essays",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.4415,
+        0.4384,
+        0.4222
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 2
+    },
+    {
+      "category": "Human condition & identity",
+      "query": "How is one's own identity shaped by life?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Pride and Prejudice",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.4298,
+        0.3983,
+        0.3976
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 1
+    },
+    {
+      "category": "Human condition & identity",
+      "query": "What is the definition of human identity?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Confessions",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.3775,
+        0.3416,
+        0.3325
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 1
+    },
+    {
+      "category": "Human condition & identity",
+      "query": "What can we do to be healthy?",
+      "top_sources": [
+        "Confessions",
+        "Montaigne Essays",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.4464,
+        0.3894,
+        0.3597
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 2
+    },
+    {
+      "category": "Human condition & identity",
+      "query": "How do the emotions we have become change how we see ourselves?",
+      "top_sources": [
+        "Confessions",
+        "Confessions",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.4471,
+        0.4082,
+        0.4069
+      ],
+      "chosen_source": "Confessions",
+      "chosen_figure": "Augustine",
+      "dominance": 2
+    },
+    {
+      "category": "Human condition & identity",
+      "query": "How does a person feel about the things they are feeling about?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Confessions",
+        "Confessions"
+      ],
+      "top_scores": [
+        0.4225,
+        0.412,
+        0.3823
+      ],
+      "chosen_source": "Confessions",
+      "chosen_figure": "Augustine",
+      "dominance": 2
+    },
+    {
+      "category": "Human condition & identity",
+      "query": "What are the consequences of human identity and identity?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Montaigne Essays",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.36,
+        0.3571,
+        0.3486
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 3
+    },
+    {
+      "category": "Human condition & identity",
+      "query": "What is being alone most affecting?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Anna Karenina",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.3969,
+        0.388,
+        0.3833
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 2
+    },
+    {
+      "category": "Human condition & identity",
+      "query": "How does the human body shape itself?",
+      "top_sources": [
+        "Inferno",
+        "Inferno",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.3725,
+        0.3338,
+        0.315
+      ],
+      "chosen_source": "Inferno",
+      "chosen_figure": "Dante",
+      "dominance": 2
+    },
+    {
+      "category": "Human condition & identity",
+      "query": "How do we define ourselves?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Montaigne Essays",
+        "Confessions"
+      ],
+      "top_scores": [
+        0.4367,
+        0.4054,
+        0.3911
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 2
+    },
+    {
+      "category": "Human condition & identity",
+      "query": "Can a person be miserable?",
+      "top_sources": [
+        "Anna Karenina",
+        "Confessions",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.5281,
+        0.4899,
+        0.4613
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 1
+    },
+    {
+      "category": "Human condition & identity",
+      "query": "Can you describe what you do when you know your own identity and your body language?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Montaigne Essays",
+        "Confessions"
+      ],
+      "top_scores": [
+        0.4902,
+        0.3773,
+        0.3765
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 2
+    },
+    {
+      "category": "Human condition & identity",
+      "query": "What does a person need to live in order to be alive?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Confessions",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.4144,
+        0.4,
+        0.3967
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 1
+    },
+    {
+      "category": "Human condition & identity",
+      "query": "What is the importance of life?",
+      "top_sources": [
+        "Anna Karenina",
+        "Anna Karenina",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.4165,
+        0.393,
+        0.3816
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 3
+    },
+    {
+      "category": "Human condition & identity",
+      "query": "What kind of identity does human life have?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Confessions",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.3806,
+        0.3753,
+        0.3746
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 2
+    },
+    {
+      "category": "Human condition & identity",
+      "query": "Why are we struggling to understand the meaning of life?",
+      "top_sources": [
+        "Anna Karenina",
+        "Confessions",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.5333,
+        0.459,
+        0.4386
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 2
+    },
+    {
+      "category": "Human condition & identity",
+      "query": "How do the human self define themselves?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Montaigne Essays",
+        "Pride and Prejudice"
+      ],
+      "top_scores": [
+        0.4411,
+        0.4037,
+        0.3885
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 2
+    },
+    {
+      "category": "Human condition & identity",
+      "query": "How does one change their own perception of themselves?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Confessions",
+        "Pride and Prejudice"
+      ],
+      "top_scores": [
+        0.5428,
+        0.4432,
+        0.4142
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 1
+    },
+    {
+      "category": "Human condition & identity",
+      "query": "Is human identity a common element of one's life?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Montaigne Essays",
+        "Confessions"
+      ],
+      "top_scores": [
+        0.4076,
+        0.3968,
+        0.3829
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 2
+    },
+    {
+      "category": "Human condition & identity",
+      "query": "What does loneliness reveal?",
+      "top_sources": [
+        "Pride and Prejudice",
+        "Anna Karenina",
+        "Pride and Prejudice"
+      ],
+      "top_scores": [
+        0.3903,
+        0.384,
+        0.3723
+      ],
+      "chosen_source": "Pride and Prejudice",
+      "chosen_figure": "Elizabeth Bennet",
+      "dominance": 2
+    },
+    {
+      "category": "Human condition & identity",
+      "query": "What is the common thread that connects the human world to each other?",
+      "top_sources": [
+        "Pride and Prejudice",
+        "Confessions",
+        "Confessions"
+      ],
+      "top_scores": [
+        0.328,
+        0.3232,
+        0.3193
+      ],
+      "chosen_source": "Confessions",
+      "chosen_figure": "Augustine",
+      "dominance": 2
+    },
+    {
+      "category": "Human condition & identity",
+      "query": "Is a person self-centered?",
+      "top_sources": [
+        "Pride and Prejudice",
+        "Montaigne Essays",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.3939,
+        0.3772,
+        0.3535
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 2
+    },
+    {
+      "category": "Human condition & identity",
+      "query": "How do psychological factors affect a person’s self-image?",
+      "top_sources": [
+        "Pride and Prejudice",
+        "Montaigne Essays",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.3886,
+        0.3683,
+        0.3667
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 2
+    },
+    {
+      "category": "Human condition & identity",
+      "query": "What does being a human have to do with identity?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Montaigne Essays",
+        "Confessions"
+      ],
+      "top_scores": [
+        0.407,
+        0.3374,
+        0.3359
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 2
+    },
+    {
+      "category": "Human condition & identity",
+      "query": "How do psychological factors affect human identity and identity?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Pride and Prejudice",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.3422,
+        0.3342,
+        0.3198
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 2
+    },
+    {
+      "category": "Human condition & identity",
+      "query": "What makes a person's own identity?",
+      "top_sources": [
+        "Pride and Prejudice",
+        "Montaigne Essays",
+        "Pride and Prejudice"
+      ],
+      "top_scores": [
+        0.3782,
+        0.3558,
+        0.3543
+      ],
+      "chosen_source": "Pride and Prejudice",
+      "chosen_figure": "Elizabeth Bennet",
+      "dominance": 2
+    },
+    {
+      "category": "Human condition & identity",
+      "query": "What is life like for a human?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Montaigne Essays",
+        "Confessions"
+      ],
+      "top_scores": [
+        0.4058,
+        0.3937,
+        0.3739
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 2
+    },
+    {
+      "category": "Human condition & identity",
+      "query": "What is a person's identity?",
+      "top_sources": [
+        "Confessions",
+        "Pride and Prejudice",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.3134,
+        0.2982,
+        0.2967
+      ],
+      "chosen_source": "Confessions",
+      "chosen_figure": "Augustine",
+      "dominance": 1
+    },
+    {
+      "category": "Human condition & identity",
+      "query": "Why does being a human being entitle you to be human?",
+      "top_sources": [
+        "Confessions",
+        "Montaigne Essays",
+        "Confessions"
+      ],
+      "top_scores": [
+        0.4226,
+        0.4213,
+        0.4179
+      ],
+      "chosen_source": "Confessions",
+      "chosen_figure": "Augustine",
+      "dominance": 2
+    },
+    {
+      "category": "Human condition & identity",
+      "query": "How do humans identify with each other?",
+      "top_sources": [
+        "Confessions",
+        "Confessions",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.3556,
+        0.3395,
+        0.3267
+      ],
+      "chosen_source": "Confessions",
+      "chosen_figure": "Augustine",
+      "dominance": 2
+    },
+    {
+      "category": "Human condition & identity",
+      "query": "What is one of the best ways to connect with others through living?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Montaigne Essays",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.4053,
+        0.3723,
+        0.3689
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 2
+    },
+    {
+      "category": "Human condition & identity",
+      "query": "What does it mean to live a life of love and harmony?",
+      "top_sources": [
+        "Confessions",
+        "Montaigne Essays",
+        "Confessions"
+      ],
+      "top_scores": [
+        0.4923,
+        0.4876,
+        0.479
+      ],
+      "chosen_source": "Confessions",
+      "chosen_figure": "Augustine",
+      "dominance": 2
+    },
+    {
+      "category": "Human condition & identity",
+      "query": "What does human identity mean to the individual and society?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Confessions",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.3912,
+        0.3686,
+        0.3673
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 2
+    },
+    {
+      "category": "Human condition & identity",
+      "query": "Why is there a need for change in identity?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Confessions",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.3269,
+        0.2842,
+        0.284
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 1
+    },
+    {
+      "category": "Human condition & identity",
+      "query": "How does personality shape the human world?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Montaigne Essays",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.3853,
+        0.3793,
+        0.366
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 3
+    },
+    {
+      "category": "Human condition & identity",
+      "query": "How can we learn more about oneself?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Montaigne Essays",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.4793,
+        0.4784,
+        0.4589
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 3
+    },
+    {
+      "category": "Human condition & identity",
+      "query": "Is oneself a source of self-knowledge?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Montaigne Essays",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.5432,
+        0.4853,
+        0.4307
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 3
+    },
+    {
+      "category": "Human condition & identity",
+      "query": "How do we become human?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Montaigne Essays",
+        "Confessions"
+      ],
+      "top_scores": [
+        0.3714,
+        0.3683,
+        0.3573
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 2
+    },
+    {
+      "category": "Human condition & identity",
+      "query": "What does a person feel when they discover theirself?",
+      "top_sources": [
+        "Confessions",
+        "Montaigne Essays",
+        "Confessions"
+      ],
+      "top_scores": [
+        0.4909,
+        0.4686,
+        0.4558
+      ],
+      "chosen_source": "Confessions",
+      "chosen_figure": "Augustine",
+      "dominance": 2
+    },
+    {
+      "category": "Human condition & identity",
+      "query": "How does identity affect us?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Montaigne Essays",
+        "Confessions"
+      ],
+      "top_scores": [
+        0.3386,
+        0.3033,
+        0.2997
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 2
+    },
+    {
+      "category": "Human condition & identity",
+      "query": "Is a person's basic existence a complete or partial life?",
+      "top_sources": [
+        "Anna Karenina",
+        "Anna Karenina",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.369,
+        0.3481,
+        0.3417
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 3
+    },
+    {
+      "category": "Social & cultural structures",
+      "query": "What would you do differently if you wanted to live the best life?",
+      "top_sources": [
+        "Anna Karenina",
+        "Confessions",
+        "Confessions"
+      ],
+      "top_scores": [
+        0.4013,
+        0.4003,
+        0.3913
+      ],
+      "chosen_source": "Confessions",
+      "chosen_figure": "Augustine",
+      "dominance": 2
+    },
+    {
+      "category": "Social & cultural structures",
+      "query": "Why do societies have a higher standard of living than others?",
+      "top_sources": [
+        "Anna Karenina",
+        "Montaigne Essays",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.4122,
+        0.4022,
+        0.3913
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 2
+    },
+    {
+      "category": "Social & cultural structures",
+      "query": "How does a society treat people in relationships?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Montaigne Essays",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.4044,
+        0.4005,
+        0.4004
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 3
+    },
+    {
+      "category": "Social & cultural structures",
+      "query": "How do people in urban areas experience life?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Montaigne Essays",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.2648,
+        0.2624,
+        0.2553
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 3
+    },
+    {
+      "category": "Social & cultural structures",
+      "query": "What does society learn about itself?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Montaigne Essays",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.5003,
+        0.4243,
+        0.4151
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 3
+    },
+    {
+      "category": "Social & cultural structures",
+      "query": "How does an euphemism influence society's structure?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Pride and Prejudice",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.3571,
+        0.3469,
+        0.3441
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 2
+    },
+    {
+      "category": "Social & cultural structures",
+      "query": "What do society's systems have to offer to citizens?",
+      "top_sources": [
+        "Anna Karenina",
+        "Anna Karenina",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.3808,
+        0.3525,
+        0.3498
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 3
+    },
+    {
+      "category": "Social & cultural structures",
+      "query": "Which structure has been defined as a cultural structure?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Montaigne Essays",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.2862,
+        0.2856,
+        0.2782
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 3
+    },
+    {
+      "category": "Social & cultural structures",
+      "query": "What do people expect from the society they live in?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Montaigne Essays",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.4066,
+        0.4033,
+        0.3986
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 3
+    },
+    {
+      "category": "Social & cultural structures",
+      "query": "What is the primary source of income for a household?",
+      "top_sources": [
+        "Pride and Prejudice",
+        "Pride and Prejudice",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.3391,
+        0.2997,
+        0.2917
+      ],
+      "chosen_source": "Pride and Prejudice",
+      "chosen_figure": "Elizabeth Bennet",
+      "dominance": 2
+    },
+    {
+      "category": "Social & cultural structures",
+      "query": "How does a society treat people who do not belong?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Confessions",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.4443,
+        0.4315,
+        0.4305
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 2
+    },
+    {
+      "category": "Social & cultural structures",
+      "query": "What makes life easier for the individual?",
+      "top_sources": [
+        "Anna Karenina",
+        "Montaigne Essays",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.4375,
+        0.427,
+        0.4079
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 2
+    },
+    {
+      "category": "Social & cultural structures",
+      "query": "What is the structure of society that determines the ways that people live?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Montaigne Essays",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.3782,
+        0.3502,
+        0.3374
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 2
+    },
+    {
+      "category": "Social & cultural structures",
+      "query": "What is life itself like in China?",
+      "top_sources": [
+        "Anna Karenina",
+        "Montaigne Essays",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.3482,
+        0.3311,
+        0.2982
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 2
+    },
+    {
+      "category": "Social & cultural structures",
+      "query": "What does a society do?",
+      "top_sources": [
+        "Anna Karenina",
+        "Anna Karenina",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.3633,
+        0.3562,
+        0.3475
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 3
+    },
+    {
+      "category": "Social & cultural structures",
+      "query": "How do family structures impact the functioning of society?",
+      "top_sources": [
+        "Anna Karenina",
+        "Pride and Prejudice",
+        "Pride and Prejudice"
+      ],
+      "top_scores": [
+        0.4458,
+        0.369,
+        0.3619
+      ],
+      "chosen_source": "Pride and Prejudice",
+      "chosen_figure": "Elizabeth Bennet",
+      "dominance": 2
+    },
+    {
+      "category": "Social & cultural structures",
+      "query": "What is the role of the social system in the lives of all living things?",
+      "top_sources": [
+        "Anna Karenina",
+        "Anna Karenina",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.3191,
+        0.3172,
+        0.3145
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 2
+    },
+    {
+      "category": "Social & cultural structures",
+      "query": "What are the consequences of a school system?",
+      "top_sources": [
+        "Anna Karenina",
+        "Anna Karenina",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.42,
+        0.4085,
+        0.35
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 3
+    },
+    {
+      "category": "Social & cultural structures",
+      "query": "What is the most important life change ever?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Confessions",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.3737,
+        0.3607,
+        0.3441
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 1
+    },
+    {
+      "category": "Social & cultural structures",
+      "query": "What is a traditional cultural ritual that has its origins in pre-Hispanic times?",
+      "top_sources": [
+        "Confessions",
+        "Montaigne Essays",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.3576,
+        0.3182,
+        0.3169
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 2
+    },
+    {
+      "category": "Social & cultural structures",
+      "query": "How do we view society today?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Montaigne Essays",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.363,
+        0.3622,
+        0.3595
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 3
+    },
+    {
+      "category": "Social & cultural structures",
+      "query": "How do societies structure themselves?",
+      "top_sources": [
+        "Anna Karenina",
+        "Anna Karenina",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.3392,
+        0.3358,
+        0.3335
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 3
+    },
+    {
+      "category": "Social & cultural structures",
+      "query": "What is a typical social construct?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Montaigne Essays",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.4101,
+        0.3889,
+        0.3271
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 2
+    },
+    {
+      "category": "Social & cultural structures",
+      "query": "How do women get to be a part of a social culture?",
+      "top_sources": [
+        "Anna Karenina",
+        "Anna Karenina",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.3421,
+        0.305,
+        0.2787
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 3
+    },
+    {
+      "category": "Social & cultural structures",
+      "query": "How do some people in society behave?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Montaigne Essays",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.4477,
+        0.3904,
+        0.3826
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 3
+    },
+    {
+      "category": "Social & cultural structures",
+      "query": "How do people relate to their family structure?",
+      "top_sources": [
+        "Anna Karenina",
+        "Pride and Prejudice",
+        "Pride and Prejudice"
+      ],
+      "top_scores": [
+        0.4542,
+        0.3918,
+        0.3825
+      ],
+      "chosen_source": "Pride and Prejudice",
+      "chosen_figure": "Elizabeth Bennet",
+      "dominance": 2
+    },
+    {
+      "category": "Social & cultural structures",
+      "query": "What is the relationship between community and the environment?",
+      "top_sources": [
+        "Confessions",
+        "Anna Karenina",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.2879,
+        0.2564,
+        0.253
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 2
+    },
+    {
+      "category": "Social & cultural structures",
+      "query": "What causes people to become more socially enlightened?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Anna Karenina",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.3977,
+        0.3923,
+        0.3911
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 2
+    },
+    {
+      "category": "Social & cultural structures",
+      "query": "How does class influence individual choices?",
+      "top_sources": [
+        "Anna Karenina",
+        "Montaigne Essays",
+        "Confessions"
+      ],
+      "top_scores": [
+        0.3152,
+        0.3066,
+        0.3037
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 1
+    },
+    {
+      "category": "Social & cultural structures",
+      "query": "How does a community act according to the rules of their community?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Confessions",
+        "Confessions"
+      ],
+      "top_scores": [
+        0.2959,
+        0.2873,
+        0.2756
+      ],
+      "chosen_source": "Confessions",
+      "chosen_figure": "Augustine",
+      "dominance": 2
+    },
+    {
+      "category": "Social & cultural structures",
+      "query": "What can you do when choosing a home for your family?",
+      "top_sources": [
+        "Anna Karenina",
+        "Pride and Prejudice",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.345,
+        0.3363,
+        0.3172
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 2
+    },
+    {
+      "category": "Social & cultural structures",
+      "query": "How does the school system influence a child's life?",
+      "top_sources": [
+        "Anna Karenina",
+        "Anna Karenina",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.3874,
+        0.3847,
+        0.3775
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 3
+    },
+    {
+      "category": "Social & cultural structures",
+      "query": "Why do people feel less happy in their lives?",
+      "top_sources": [
+        "Confessions",
+        "Confessions",
+        "Confessions"
+      ],
+      "top_scores": [
+        0.5456,
+        0.5179,
+        0.5119
+      ],
+      "chosen_source": "Confessions",
+      "chosen_figure": "Augustine",
+      "dominance": 3
+    },
+    {
+      "category": "Social & cultural structures",
+      "query": "What would be a good title for a sociocultural study?",
+      "top_sources": [
+        "Anna Karenina",
+        "Montaigne Essays",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.3861,
+        0.3202,
+        0.3182
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 2
+    },
+    {
+      "category": "Social & cultural structures",
+      "query": "How can a society build structures of individualism?",
+      "top_sources": [
+        "Anna Karenina",
+        "Montaigne Essays",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.3555,
+        0.342,
+        0.3263
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 2
+    },
+    {
+      "category": "Social & cultural structures",
+      "query": "How does a social ritual function?",
+      "top_sources": [
+        "Confessions",
+        "Anna Karenina",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.3566,
+        0.3537,
+        0.3493
+      ],
+      "chosen_source": "Confessions",
+      "chosen_figure": "Augustine",
+      "dominance": 1
+    },
+    {
+      "category": "Social & cultural structures",
+      "query": "Why do societies demand a host?",
+      "top_sources": [
+        "Anna Karenina",
+        "Anna Karenina",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.3608,
+        0.3489,
+        0.3035
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 2
+    },
+    {
+      "category": "Social & cultural structures",
+      "query": "What would be the best title of your piece?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Montaigne Essays",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.3746,
+        0.3736,
+        0.3541
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 3
+    },
+    {
+      "category": "Social & cultural structures",
+      "query": "What happens when people have an extra bed in a room?",
+      "top_sources": [
+        "Anna Karenina",
+        "Anna Karenina",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.3814,
+        0.3662,
+        0.363
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 3
+    },
+    {
+      "category": "Social & cultural structures",
+      "query": "What is a society's response to a social injustice?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Montaigne Essays",
+        "Confessions"
+      ],
+      "top_scores": [
+        0.3988,
+        0.3941,
+        0.3905
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 2
+    },
+    {
+      "category": "Social & cultural structures",
+      "query": "How does a community treat others?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Montaigne Essays",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.443,
+        0.3795,
+        0.3462
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 3
+    },
+    {
+      "category": "Social & cultural structures",
+      "query": "What are the causes of society's development?",
+      "top_sources": [
+        "Anna Karenina",
+        "Anna Karenina",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.3693,
+        0.3689,
+        0.3602
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 3
+    },
+    {
+      "category": "Social & cultural structures",
+      "query": "What does it mean to be human?",
+      "top_sources": [
+        "Confessions",
+        "Confessions",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.4365,
+        0.3945,
+        0.3875
+      ],
+      "chosen_source": "Confessions",
+      "chosen_figure": "Augustine",
+      "dominance": 2
+    },
+    {
+      "category": "Social & cultural structures",
+      "query": "What happens if a man doesn't take a good bath or does not get enough sun?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Montaigne Essays",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.3805,
+        0.3612,
+        0.3511
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 2
+    },
+    {
+      "category": "Social & cultural structures",
+      "query": "What can be learned from human activities?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Anna Karenina",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.3338,
+        0.3274,
+        0.3244
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 2
+    },
+    {
+      "category": "Social & cultural structures",
+      "query": "What does a community make of their leaders and members?",
+      "top_sources": [
+        "Anna Karenina",
+        "Confessions",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.3524,
+        0.3336,
+        0.3276
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 2
+    },
+    {
+      "category": "Social & cultural structures",
+      "query": "How does the organization of a community affect its ability to function?",
+      "top_sources": [
+        "Anna Karenina",
+        "Anna Karenina",
+        "Confessions"
+      ],
+      "top_scores": [
+        0.3248,
+        0.2834,
+        0.2583
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 2
+    },
+    {
+      "category": "Social & cultural structures",
+      "query": "What will society tell us about themselves?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Pride and Prejudice",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.4717,
+        0.4283,
+        0.4274
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 2
+    },
+    {
+      "category": "Social & cultural structures",
+      "query": "How do we describe the world?",
+      "top_sources": [
+        "Confessions",
+        "Pride and Prejudice",
+        "Confessions"
+      ],
+      "top_scores": [
+        0.4643,
+        0.3971,
+        0.3958
+      ],
+      "chosen_source": "Confessions",
+      "chosen_figure": "Augustine",
+      "dominance": 2
+    },
+    {
+      "category": "Social & cultural structures",
+      "query": "How does society influence social relationships?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Montaigne Essays",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.3685,
+        0.3494,
+        0.3397
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 2
+    },
+    {
+      "category": "Existential / philosophical",
+      "query": "Does the universe exist?",
+      "top_sources": [
+        "Confessions",
+        "Confessions",
+        "Confessions"
+      ],
+      "top_scores": [
+        0.426,
+        0.4194,
+        0.3914
+      ],
+      "chosen_source": "Confessions",
+      "chosen_figure": "Augustine",
+      "dominance": 3
+    },
+    {
+      "category": "Existential / philosophical",
+      "query": "What can be taught about the human condition, such as in a philosophy course?",
+      "top_sources": [
+        "Anna Karenina",
+        "Montaigne Essays",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.3955,
+        0.3944,
+        0.3917
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 2
+    },
+    {
+      "category": "Existential / philosophical",
+      "query": "How does the idea of God, as a philosopher, make sense to someone who is not Christian?",
+      "top_sources": [
+        "Anna Karenina",
+        "Anna Karenina",
+        "Confessions"
+      ],
+      "top_scores": [
+        0.4309,
+        0.4072,
+        0.4064
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 2
+    },
+    {
+      "category": "Existential / philosophical",
+      "query": "Why do we not live having a good future?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Montaigne Essays",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.4549,
+        0.4261,
+        0.4126
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 3
+    },
+    {
+      "category": "Existential / philosophical",
+      "query": "Are true happiness and true desire the same?",
+      "top_sources": [
+        "Confessions",
+        "Confessions",
+        "Confessions"
+      ],
+      "top_scores": [
+        0.4891,
+        0.4883,
+        0.4749
+      ],
+      "chosen_source": "Confessions",
+      "chosen_figure": "Augustine",
+      "dominance": 3
+    },
+    {
+      "category": "Existential / philosophical",
+      "query": "Is life so complex if one's beliefs and practices are not applicable to living in the moment?",
+      "top_sources": [
+        "Anna Karenina",
+        "Montaigne Essays",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.3938,
+        0.3796,
+        0.3762
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 2
+    },
+    {
+      "category": "Existential / philosophical",
+      "query": "What is the origin of the idea that there's only one existence?",
+      "top_sources": [
+        "Anna Karenina",
+        "Anna Karenina",
+        "Confessions"
+      ],
+      "top_scores": [
+        0.4168,
+        0.3934,
+        0.3762
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 2
+    },
+    {
+      "category": "Existential / philosophical",
+      "query": "Does the universe have a transcendental universe?",
+      "top_sources": [
+        "Confessions",
+        "Confessions",
+        "Confessions"
+      ],
+      "top_scores": [
+        0.3287,
+        0.2806,
+        0.2799
+      ],
+      "chosen_source": "Confessions",
+      "chosen_figure": "Augustine",
+      "dominance": 3
+    },
+    {
+      "category": "Existential / philosophical",
+      "query": "What kind of life is a naive idea?",
+      "top_sources": [
+        "Anna Karenina",
+        "Montaigne Essays",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.3781,
+        0.3665,
+        0.3559
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 2
+    },
+    {
+      "category": "Existential / philosophical",
+      "query": "Is the existence of a life in its own right?",
+      "top_sources": [
+        "Anna Karenina",
+        "Confessions",
+        "Confessions"
+      ],
+      "top_scores": [
+        0.4167,
+        0.416,
+        0.4017
+      ],
+      "chosen_source": "Confessions",
+      "chosen_figure": "Augustine",
+      "dominance": 2
+    },
+    {
+      "category": "Existential / philosophical",
+      "query": "What kind of life do humans live in?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Montaigne Essays",
+        "Confessions"
+      ],
+      "top_scores": [
+        0.3544,
+        0.337,
+        0.3227
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 2
+    },
+    {
+      "category": "Existential / philosophical",
+      "query": "Can the universe create and maintain a human existence?",
+      "top_sources": [
+        "Confessions",
+        "Anna Karenina",
+        "Confessions"
+      ],
+      "top_scores": [
+        0.4208,
+        0.398,
+        0.3831
+      ],
+      "chosen_source": "Confessions",
+      "chosen_figure": "Augustine",
+      "dominance": 2
+    },
+    {
+      "category": "Existential / philosophical",
+      "query": "What is the basic principle of the existence / philosophical philosophy?",
+      "top_sources": [
+        "Anna Karenina",
+        "Anna Karenina",
+        "Confessions"
+      ],
+      "top_scores": [
+        0.3938,
+        0.3748,
+        0.3424
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 2
+    },
+    {
+      "category": "Existential / philosophical",
+      "query": "Is philosophy the only way to learn what is important in life?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Anna Karenina",
+        "Pride and Prejudice"
+      ],
+      "top_scores": [
+        0.427,
+        0.4177,
+        0.3992
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 1
+    },
+    {
+      "category": "Existential / philosophical",
+      "query": "What can be said about a single life?",
+      "top_sources": [
+        "Anna Karenina",
+        "Anna Karenina",
+        "Confessions"
+      ],
+      "top_scores": [
+        0.4784,
+        0.4417,
+        0.4247
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 2
+    },
+    {
+      "category": "Existential / philosophical",
+      "query": "Is there life outside the physical body?",
+      "top_sources": [
+        "Confessions",
+        "Confessions",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.4211,
+        0.411,
+        0.4019
+      ],
+      "chosen_source": "Confessions",
+      "chosen_figure": "Augustine",
+      "dominance": 2
+    },
+    {
+      "category": "Existential / philosophical",
+      "query": "What does being an existential philosophical concept mean to a person?",
+      "top_sources": [
+        "Anna Karenina",
+        "Anna Karenina",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.4563,
+        0.4272,
+        0.3883
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 2
+    },
+    {
+      "category": "Existential / philosophical",
+      "query": "How can we see the reality of life as a product of its own creation?",
+      "top_sources": [
+        "Anna Karenina",
+        "Anna Karenina",
+        "Confessions"
+      ],
+      "top_scores": [
+        0.4138,
+        0.4059,
+        0.3961
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 2
+    },
+    {
+      "category": "Existential / philosophical",
+      "query": "Is a life with no source of meaning?",
+      "top_sources": [
+        "Anna Karenina",
+        "Confessions",
+        "Confessions"
+      ],
+      "top_scores": [
+        0.542,
+        0.4773,
+        0.462
+      ],
+      "chosen_source": "Confessions",
+      "chosen_figure": "Augustine",
+      "dominance": 2
+    },
+    {
+      "category": "Existential / philosophical",
+      "query": "What is the opposite of a life?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Anna Karenina",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.365,
+        0.3557,
+        0.355
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 2
+    },
+    {
+      "category": "Existential / philosophical",
+      "query": "What does it mean to be an existentialist?",
+      "top_sources": [
+        "Anna Karenina",
+        "Anna Karenina",
+        "Confessions"
+      ],
+      "top_scores": [
+        0.4643,
+        0.4087,
+        0.3819
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 2
+    },
+    {
+      "category": "Existential / philosophical",
+      "query": "What is the existence of an existential philosophical philosophy?",
+      "top_sources": [
+        "Anna Karenina",
+        "Montaigne Essays",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.4103,
+        0.3406,
+        0.3136
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 2
+    },
+    {
+      "category": "Existential / philosophical",
+      "query": "Is freedom born from the dead impossible?",
+      "top_sources": [
+        "Confessions",
+        "Confessions",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.4054,
+        0.3958,
+        0.3915
+      ],
+      "chosen_source": "Confessions",
+      "chosen_figure": "Augustine",
+      "dominance": 2
+    },
+    {
+      "category": "Existential / philosophical",
+      "query": "Would life be worth more than the unexamined one if it were not for the soul?",
+      "top_sources": [
+        "Confessions",
+        "Confessions",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.4724,
+        0.4701,
+        0.4519
+      ],
+      "chosen_source": "Confessions",
+      "chosen_figure": "Augustine",
+      "dominance": 2
+    },
+    {
+      "category": "Existential / philosophical",
+      "query": "What type of life does the philosophy of existence represent?",
+      "top_sources": [
+        "Anna Karenina",
+        "Anna Karenina",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.4434,
+        0.443,
+        0.4317
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 3
+    },
+    {
+      "category": "Existential / philosophical",
+      "query": "What do they call the existence of the soul?",
+      "top_sources": [
+        "Confessions",
+        "Confessions",
+        "Confessions"
+      ],
+      "top_scores": [
+        0.5201,
+        0.5089,
+        0.4951
+      ],
+      "chosen_source": "Confessions",
+      "chosen_figure": "Augustine",
+      "dominance": 3
+    },
+    {
+      "category": "Existential / philosophical",
+      "query": "How can we live knowing we will die?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Montaigne Essays",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.5803,
+        0.5224,
+        0.4854
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 2
+    },
+    {
+      "category": "Existential / philosophical",
+      "query": "Why do the ideas of life existentially?",
+      "top_sources": [
+        "Anna Karenina",
+        "Anna Karenina",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.5001,
+        0.4542,
+        0.453
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 3
+    },
+    {
+      "category": "Existential / philosophical",
+      "query": "What does existence suggest about the existence of matter?",
+      "top_sources": [
+        "Anna Karenina",
+        "Confessions",
+        "Confessions"
+      ],
+      "top_scores": [
+        0.445,
+        0.4361,
+        0.4044
+      ],
+      "chosen_source": "Confessions",
+      "chosen_figure": "Augustine",
+      "dominance": 2
+    },
+    {
+      "category": "Existential / philosophical",
+      "query": "How is existence different from our modern existence?",
+      "top_sources": [
+        "Anna Karenina",
+        "Confessions",
+        "Confessions"
+      ],
+      "top_scores": [
+        0.4147,
+        0.4098,
+        0.406
+      ],
+      "chosen_source": "Confessions",
+      "chosen_figure": "Augustine",
+      "dominance": 2
+    },
+    {
+      "category": "Existential / philosophical",
+      "query": "Is happiness in any form unique or free?",
+      "top_sources": [
+        "Confessions",
+        "Confessions",
+        "Confessions"
+      ],
+      "top_scores": [
+        0.5007,
+        0.4726,
+        0.4518
+      ],
+      "chosen_source": "Confessions",
+      "chosen_figure": "Augustine",
+      "dominance": 3
+    },
+    {
+      "category": "Existential / philosophical",
+      "query": "What are the things that are the most likely to change in time?",
+      "top_sources": [
+        "Confessions",
+        "Montaigne Essays",
+        "Confessions"
+      ],
+      "top_scores": [
+        0.4519,
+        0.4469,
+        0.433
+      ],
+      "chosen_source": "Confessions",
+      "chosen_figure": "Augustine",
+      "dominance": 2
+    },
+    {
+      "category": "Existential / philosophical",
+      "query": "Is one living situation still existential or philosophical?",
+      "top_sources": [
+        "Anna Karenina",
+        "Anna Karenina",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.4345,
+        0.4159,
+        0.4133
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 2
+    },
+    {
+      "category": "Existential / philosophical",
+      "query": "What can we do with our lives?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Montaigne Essays",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.424,
+        0.3823,
+        0.3735
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 2
+    },
+    {
+      "category": "Existential / philosophical",
+      "query": "What kind of life does the \"true happiness\" equate to?",
+      "top_sources": [
+        "Confessions",
+        "Montaigne Essays",
+        "Confessions"
+      ],
+      "top_scores": [
+        0.5342,
+        0.5261,
+        0.5008
+      ],
+      "chosen_source": "Confessions",
+      "chosen_figure": "Augustine",
+      "dominance": 2
+    },
+    {
+      "category": "Existential / philosophical",
+      "query": "What is the way a human life is?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Anna Karenina",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.4418,
+        0.4359,
+        0.41
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 2
+    },
+    {
+      "category": "Existential / philosophical",
+      "query": "Is the life we want in this world meaningful?",
+      "top_sources": [
+        "Confessions",
+        "Anna Karenina",
+        "Confessions"
+      ],
+      "top_scores": [
+        0.4095,
+        0.4036,
+        0.4018
+      ],
+      "chosen_source": "Confessions",
+      "chosen_figure": "Augustine",
+      "dominance": 2
+    },
+    {
+      "category": "Existential / philosophical",
+      "query": "Does the heart exist apart from the body?",
+      "top_sources": [
+        "Confessions",
+        "Confessions",
+        "Inferno"
+      ],
+      "top_scores": [
+        0.4061,
+        0.3914,
+        0.3153
+      ],
+      "chosen_source": "Confessions",
+      "chosen_figure": "Augustine",
+      "dominance": 2
+    },
+    {
+      "category": "Existential / philosophical",
+      "query": "Which philosophical concept is the most logical and logical to explain existence?",
+      "top_sources": [
+        "Confessions",
+        "Anna Karenina",
+        "Confessions"
+      ],
+      "top_scores": [
+        0.4289,
+        0.4166,
+        0.4028
+      ],
+      "chosen_source": "Confessions",
+      "chosen_figure": "Augustine",
+      "dominance": 2
+    },
+    {
+      "category": "Existential / philosophical",
+      "query": "Is life defined by God?",
+      "top_sources": [
+        "Confessions",
+        "Confessions",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.4839,
+        0.4477,
+        0.4466
+      ],
+      "chosen_source": "Confessions",
+      "chosen_figure": "Augustine",
+      "dominance": 2
+    },
+    {
+      "category": "Existential / philosophical",
+      "query": "What should we be grateful for when we have been resigned to it?",
+      "top_sources": [
+        "Confessions",
+        "Montaigne Essays",
+        "Pride and Prejudice"
+      ],
+      "top_scores": [
+        0.4129,
+        0.4091,
+        0.3983
+      ],
+      "chosen_source": "Confessions",
+      "chosen_figure": "Augustine",
+      "dominance": 1
+    },
+    {
+      "category": "Existential / philosophical",
+      "query": "What happens to the ego once we have realized the potential of the world?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Montaigne Essays",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.3992,
+        0.3893,
+        0.3887
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 2
+    },
+    {
+      "category": "Existential / philosophical",
+      "query": "What kind of world can a human live in?",
+      "top_sources": [
+        "Confessions",
+        "Montaigne Essays",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.349,
+        0.3413,
+        0.3265
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 2
+    },
+    {
+      "category": "Existential / philosophical",
+      "query": "What kind of things are most intrinsic to the universe?",
+      "top_sources": [
+        "Confessions",
+        "Confessions",
+        "Confessions"
+      ],
+      "top_scores": [
+        0.4372,
+        0.4282,
+        0.4006
+      ],
+      "chosen_source": "Confessions",
+      "chosen_figure": "Augustine",
+      "dominance": 3
+    },
+    {
+      "category": "Existential / philosophical",
+      "query": "Is life the same as what you know about yourself?",
+      "top_sources": [
+        "Confessions",
+        "Montaigne Essays",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.4156,
+        0.4006,
+        0.3956
+      ],
+      "chosen_source": "Confessions",
+      "chosen_figure": "Augustine",
+      "dominance": 1
+    },
+    {
+      "category": "Existential / philosophical",
+      "query": "Is a person in the world more repressed than the world around them?",
+      "top_sources": [
+        "Anna Karenina",
+        "Montaigne Essays",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.3928,
+        0.3693,
+        0.3601
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 2
+    },
+    {
+      "category": "Existential / philosophical",
+      "query": "What does existence look like?",
+      "top_sources": [
+        "Confessions",
+        "Confessions",
+        "Confessions"
+      ],
+      "top_scores": [
+        0.5276,
+        0.5177,
+        0.4992
+      ],
+      "chosen_source": "Confessions",
+      "chosen_figure": "Augustine",
+      "dominance": 3
+    },
+    {
+      "category": "Existential / philosophical",
+      "query": "What is the life of the self that can cause us to feel like we are a piece of the other?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Montaigne Essays",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.514,
+        0.4699,
+        0.4677
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 3
+    },
+    {
+      "category": "Existential / philosophical",
+      "query": "What can I imagine if life were to end?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Confessions",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.3854,
+        0.3787,
+        0.3748
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 1
+    },
+    {
+      "category": "Existential / philosophical",
+      "query": "What does the existence of a living being consist of?",
+      "top_sources": [
+        "Confessions",
+        "Confessions",
+        "Confessions"
+      ],
+      "top_scores": [
+        0.5219,
+        0.5069,
+        0.4635
+      ],
+      "chosen_source": "Confessions",
+      "chosen_figure": "Augustine",
+      "dominance": 3
+    },
+    {
+      "category": "Interpersonal relationships",
+      "query": "How do people respond to a change in the way they view relationships?",
+      "top_sources": [
+        "Anna Karenina",
+        "Anna Karenina",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.4286,
+        0.3807,
+        0.3793
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 3
+    },
+    {
+      "category": "Interpersonal relationships",
+      "query": "Why do people seem to dislike others when they know they’re wrong?",
+      "top_sources": [
+        "Confessions",
+        "Montaigne Essays",
+        "Pride and Prejudice"
+      ],
+      "top_scores": [
+        0.4121,
+        0.4097,
+        0.391
+      ],
+      "chosen_source": "Confessions",
+      "chosen_figure": "Augustine",
+      "dominance": 1
+    },
+    {
+      "category": "Interpersonal relationships",
+      "query": "What do you usually expect a person to say to you when you talk?",
+      "top_sources": [
+        "Pride and Prejudice",
+        "Pride and Prejudice",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.4859,
+        0.3983,
+        0.3864
+      ],
+      "chosen_source": "Pride and Prejudice",
+      "chosen_figure": "Elizabeth Bennet",
+      "dominance": 2
+    },
+    {
+      "category": "Interpersonal relationships",
+      "query": "How do we recognize a person we should love?",
+      "top_sources": [
+        "Confessions",
+        "Confessions",
+        "Confessions"
+      ],
+      "top_scores": [
+        0.3793,
+        0.3523,
+        0.345
+      ],
+      "chosen_source": "Confessions",
+      "chosen_figure": "Augustine",
+      "dominance": 3
+    },
+    {
+      "category": "Interpersonal relationships",
+      "query": "How do relationships feel to couples?",
+      "top_sources": [
+        "Anna Karenina",
+        "Anna Karenina",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.3687,
+        0.3656,
+        0.3539
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 3
+    },
+    {
+      "category": "Interpersonal relationships",
+      "query": "How can relationships be effected by life?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Confessions",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.4049,
+        0.3968,
+        0.3857
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 1
+    },
+    {
+      "category": "Interpersonal relationships",
+      "query": "How can people relate to one another?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Montaigne Essays",
+        "Pride and Prejudice"
+      ],
+      "top_scores": [
+        0.4267,
+        0.3536,
+        0.3493
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 2
+    },
+    {
+      "category": "Interpersonal relationships",
+      "query": "Why is friendship difficult?",
+      "top_sources": [
+        "Confessions",
+        "Montaigne Essays",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.3724,
+        0.3664,
+        0.3633
+      ],
+      "chosen_source": "Confessions",
+      "chosen_figure": "Augustine",
+      "dominance": 1
+    },
+    {
+      "category": "Interpersonal relationships",
+      "query": "How does one interact with another in a relationship?",
+      "top_sources": [
+        "Anna Karenina",
+        "Anna Karenina",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.4036,
+        0.3468,
+        0.3194
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 3
+    },
+    {
+      "category": "Interpersonal relationships",
+      "query": "How does relationships change in the past?",
+      "top_sources": [
+        "Anna Karenina",
+        "Anna Karenina",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.4767,
+        0.4228,
+        0.4015
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 3
+    },
+    {
+      "category": "Interpersonal relationships",
+      "query": "What makes you want to make a first impression on your future romantic partner?",
+      "top_sources": [
+        "Pride and Prejudice",
+        "Pride and Prejudice",
+        "Pride and Prejudice"
+      ],
+      "top_scores": [
+        0.4569,
+        0.4431,
+        0.4077
+      ],
+      "chosen_source": "Pride and Prejudice",
+      "chosen_figure": "Elizabeth Bennet",
+      "dominance": 3
+    },
+    {
+      "category": "Interpersonal relationships",
+      "query": "How can relationships be a metaphor for life itself?",
+      "top_sources": [
+        "Pride and Prejudice",
+        "Confessions",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.4396,
+        0.3957,
+        0.3847
+      ],
+      "chosen_source": "Pride and Prejudice",
+      "chosen_figure": "Elizabeth Bennet",
+      "dominance": 1
+    },
+    {
+      "category": "Interpersonal relationships",
+      "query": "How can we best communicate?",
+      "top_sources": [
+        "Pride and Prejudice",
+        "Confessions",
+        "Pride and Prejudice"
+      ],
+      "top_scores": [
+        0.376,
+        0.3693,
+        0.3099
+      ],
+      "chosen_source": "Pride and Prejudice",
+      "chosen_figure": "Elizabeth Bennet",
+      "dominance": 2
+    },
+    {
+      "category": "Interpersonal relationships",
+      "query": "How can relationships be improved?",
+      "top_sources": [
+        "Anna Karenina",
+        "Anna Karenina",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.3772,
+        0.3322,
+        0.3312
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 3
+    },
+    {
+      "category": "Interpersonal relationships",
+      "query": "How does friendship change the way people think?",
+      "top_sources": [
+        "Confessions",
+        "Montaigne Essays",
+        "Confessions"
+      ],
+      "top_scores": [
+        0.4475,
+        0.4066,
+        0.3899
+      ],
+      "chosen_source": "Confessions",
+      "chosen_figure": "Augustine",
+      "dominance": 2
+    },
+    {
+      "category": "Interpersonal relationships",
+      "query": "How can our relationships be positive?",
+      "top_sources": [
+        "Confessions",
+        "Anna Karenina",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.3844,
+        0.3778,
+        0.3671
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 2
+    },
+    {
+      "category": "Interpersonal relationships",
+      "query": "How does the relationship between a family member and a partner impact people's lives?",
+      "top_sources": [
+        "Anna Karenina",
+        "Pride and Prejudice",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.4253,
+        0.4203,
+        0.3866
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 2
+    },
+    {
+      "category": "Interpersonal relationships",
+      "query": "What is a crucial component of a person's life?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Montaigne Essays",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.4404,
+        0.4327,
+        0.4221
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 2
+    },
+    {
+      "category": "Interpersonal relationships",
+      "query": "How can we be confident about relationships that we will always have?",
+      "top_sources": [
+        "Anna Karenina",
+        "Anna Karenina",
+        "Pride and Prejudice"
+      ],
+      "top_scores": [
+        0.3824,
+        0.3646,
+        0.3594
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 2
+    },
+    {
+      "category": "Interpersonal relationships",
+      "query": "How do we show empathy to others?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Pride and Prejudice",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.4988,
+        0.4316,
+        0.3928
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 2
+    },
+    {
+      "category": "Interpersonal relationships",
+      "query": "How are relationships different in general?",
+      "top_sources": [
+        "Anna Karenina",
+        "Anna Karenina",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.3288,
+        0.319,
+        0.3182
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 3
+    },
+    {
+      "category": "Interpersonal relationships",
+      "query": "Does friendship involve mutual friends and family?",
+      "top_sources": [
+        "Anna Karenina",
+        "Pride and Prejudice",
+        "Confessions"
+      ],
+      "top_scores": [
+        0.3997,
+        0.3328,
+        0.33
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 1
+    },
+    {
+      "category": "Interpersonal relationships",
+      "query": "What are some things that are important about relationships?",
+      "top_sources": [
+        "Anna Karenina",
+        "Anna Karenina",
+        "Pride and Prejudice"
+      ],
+      "top_scores": [
+        0.3898,
+        0.3706,
+        0.3306
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 2
+    },
+    {
+      "category": "Interpersonal relationships",
+      "query": "What are people generally good at?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Pride and Prejudice",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.2985,
+        0.2966,
+        0.2837
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 2
+    },
+    {
+      "category": "Interpersonal relationships",
+      "query": "When couples work together, how can they deal with the pressures of the relationship?",
+      "top_sources": [
+        "Anna Karenina",
+        "Anna Karenina",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.3789,
+        0.3226,
+        0.3159
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 3
+    },
+    {
+      "category": "Interpersonal relationships",
+      "query": "How does it feel to share experiences and feelings of others?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Montaigne Essays",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.4532,
+        0.4399,
+        0.4091
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 3
+    },
+    {
+      "category": "Interpersonal relationships",
+      "query": "Which personality trait can cause you to lose trust and esteem in others?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Montaigne Essays",
+        "Pride and Prejudice"
+      ],
+      "top_scores": [
+        0.4641,
+        0.4553,
+        0.4225
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 2
+    },
+    {
+      "category": "Interpersonal relationships",
+      "query": "How can we identify relationships that we should not take for granted?",
+      "top_sources": [
+        "Pride and Prejudice",
+        "Anna Karenina",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.4416,
+        0.4174,
+        0.4072
+      ],
+      "chosen_source": "Pride and Prejudice",
+      "chosen_figure": "Elizabeth Bennet",
+      "dominance": 1
+    },
+    {
+      "category": "Interpersonal relationships",
+      "query": "What is a good example of how good relationships can be?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Anna Karenina",
+        "Pride and Prejudice"
+      ],
+      "top_scores": [
+        0.4216,
+        0.4206,
+        0.3623
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 1
+    },
+    {
+      "category": "Interpersonal relationships",
+      "query": "How can two people cope with each other's imperfections?",
+      "top_sources": [
+        "Anna Karenina",
+        "Confessions",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.4355,
+        0.4247,
+        0.4002
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 2
+    },
+    {
+      "category": "Interpersonal relationships",
+      "query": "How do first impressions help us to define others?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Montaigne Essays",
+        "Pride and Prejudice"
+      ],
+      "top_scores": [
+        0.5255,
+        0.4574,
+        0.4559
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 2
+    },
+    {
+      "category": "Interpersonal relationships",
+      "query": "What is the difference between relationships?",
+      "top_sources": [
+        "Anna Karenina",
+        "Anna Karenina",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.3006,
+        0.2841,
+        0.2819
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 3
+    },
+    {
+      "category": "Interpersonal relationships",
+      "query": "What is the best way to describe relationships?",
+      "top_sources": [
+        "Anna Karenina",
+        "Pride and Prejudice",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.3661,
+        0.341,
+        0.3394
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 2
+    },
+    {
+      "category": "Interpersonal relationships",
+      "query": "How can the relationships in your life change according to you?",
+      "top_sources": [
+        "Anna Karenina",
+        "Anna Karenina",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.4083,
+        0.4001,
+        0.3852
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 2
+    },
+    {
+      "category": "Interpersonal relationships",
+      "query": "How can we define people?",
+      "top_sources": [
+        "Anna Karenina",
+        "Confessions",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.3735,
+        0.3699,
+        0.3622
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 2
+    },
+    {
+      "category": "Interpersonal relationships",
+      "query": "How do adults and children feel about relationships?",
+      "top_sources": [
+        "Anna Karenina",
+        "Anna Karenina",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.3504,
+        0.3464,
+        0.328
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 2
+    },
+    {
+      "category": "Interpersonal relationships",
+      "query": "Which of these is the opposite of true friendship?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Confessions",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.4269,
+        0.41,
+        0.4024
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 2
+    },
+    {
+      "category": "Interpersonal relationships",
+      "query": "What do couples do to prepare for the future?",
+      "top_sources": [
+        "Anna Karenina",
+        "Anna Karenina",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.3977,
+        0.3766,
+        0.3525
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 3
+    },
+    {
+      "category": "Interpersonal relationships",
+      "query": "How can people have trust and respect without hurting them?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Montaigne Essays",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.4284,
+        0.4205,
+        0.3945
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 3
+    },
+    {
+      "category": "Interpersonal relationships",
+      "query": "What is the most important factor of relationships?",
+      "top_sources": [
+        "Pride and Prejudice",
+        "Anna Karenina",
+        "Pride and Prejudice"
+      ],
+      "top_scores": [
+        0.3282,
+        0.3208,
+        0.3112
+      ],
+      "chosen_source": "Pride and Prejudice",
+      "chosen_figure": "Elizabeth Bennet",
+      "dominance": 2
+    },
+    {
+      "category": "Interpersonal relationships",
+      "query": "How do relationships work in a day-to-day life?",
+      "top_sources": [
+        "Anna Karenina",
+        "Anna Karenina",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.4108,
+        0.404,
+        0.3442
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 3
+    },
+    {
+      "category": "Interpersonal relationships",
+      "query": "How do parents and their children feel about their relationship?",
+      "top_sources": [
+        "Anna Karenina",
+        "Pride and Prejudice",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.4012,
+        0.379,
+        0.3617
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 2
+    },
+    {
+      "category": "Interpersonal relationships",
+      "query": "How do the emotions of others affect how they relate to one another?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Confessions",
+        "Confessions"
+      ],
+      "top_scores": [
+        0.4027,
+        0.3937,
+        0.3934
+      ],
+      "chosen_source": "Confessions",
+      "chosen_figure": "Augustine",
+      "dominance": 2
+    },
+    {
+      "category": "Interpersonal relationships",
+      "query": "Why do some people have difficulties communicating in their relationships?",
+      "top_sources": [
+        "Anna Karenina",
+        "Anna Karenina",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.335,
+        0.3296,
+        0.3278
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 3
+    },
+    {
+      "category": "Interpersonal relationships",
+      "query": "How are relationships formed?",
+      "top_sources": [
+        "Anna Karenina",
+        "Anna Karenina",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.3862,
+        0.3788,
+        0.343
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 3
+    },
+    {
+      "category": "Interpersonal relationships",
+      "query": "How do people get along better with each other than with other humans?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Confessions",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.3747,
+        0.3704,
+        0.3553
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 2
+    },
+    {
+      "category": "Interpersonal relationships",
+      "query": "How does romantic attraction affect relationships?",
+      "top_sources": [
+        "Pride and Prejudice",
+        "Pride and Prejudice",
+        "Pride and Prejudice"
+      ],
+      "top_scores": [
+        0.3993,
+        0.3876,
+        0.3834
+      ],
+      "chosen_source": "Pride and Prejudice",
+      "chosen_figure": "Elizabeth Bennet",
+      "dominance": 3
+    },
+    {
+      "category": "Interpersonal relationships",
+      "query": "How do we treat others?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Montaigne Essays",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.4913,
+        0.4431,
+        0.43
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 3
+    },
+    {
+      "category": "Interpersonal relationships",
+      "query": "How do feelings of loyalty affect someone?",
+      "top_sources": [
+        "Pride and Prejudice",
+        "Pride and Prejudice",
+        "Pride and Prejudice"
+      ],
+      "top_scores": [
+        0.4708,
+        0.4617,
+        0.4569
+      ],
+      "chosen_source": "Pride and Prejudice",
+      "chosen_figure": "Elizabeth Bennet",
+      "dominance": 3
+    },
+    {
+      "category": "Interpersonal relationships",
+      "query": "What are ways to help each other survive?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Montaigne Essays",
+        "Confessions"
+      ],
+      "top_scores": [
+        0.3789,
+        0.3595,
+        0.3565
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 2
+    },
+    {
+      "category": "Conflict & struggle",
+      "query": "Why is fighting difficult?",
+      "top_sources": [
+        "Anna Karenina",
+        "Anna Karenina",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.378,
+        0.368,
+        0.3478
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 3
+    },
+    {
+      "category": "Conflict & struggle",
+      "query": "What does conflict mean for the human race?",
+      "top_sources": [
+        "Confessions",
+        "Montaigne Essays",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.4229,
+        0.3897,
+        0.3819
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 2
+    },
+    {
+      "category": "Conflict & struggle",
+      "query": "How do children learn to deal with conflict?",
+      "top_sources": [
+        "Anna Karenina",
+        "Anna Karenina",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.3903,
+        0.3488,
+        0.348
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 3
+    },
+    {
+      "category": "Conflict & struggle",
+      "query": "What is the most challenging circumstance faced by a person living alone in a city?",
+      "top_sources": [
+        "Anna Karenina",
+        "Anna Karenina",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.4165,
+        0.4009,
+        0.4007
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 3
+    },
+    {
+      "category": "Conflict & struggle",
+      "query": "What is it like to struggle with oneself?",
+      "top_sources": [
+        "Confessions",
+        "Anna Karenina",
+        "Pride and Prejudice"
+      ],
+      "top_scores": [
+        0.433,
+        0.4201,
+        0.4185
+      ],
+      "chosen_source": "Confessions",
+      "chosen_figure": "Augustine",
+      "dominance": 1
+    },
+    {
+      "category": "Conflict & struggle",
+      "query": "Why are people struggling through life?",
+      "top_sources": [
+        "Confessions",
+        "Montaigne Essays",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.4389,
+        0.4154,
+        0.4
+      ],
+      "chosen_source": "Confessions",
+      "chosen_figure": "Augustine",
+      "dominance": 1
+    },
+    {
+      "category": "Conflict & struggle",
+      "query": "What do we do when we have no one to blame?",
+      "top_sources": [
+        "Anna Karenina",
+        "Pride and Prejudice",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.4414,
+        0.3913,
+        0.3735
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 2
+    },
+    {
+      "category": "Conflict & struggle",
+      "query": "How is life on the side of battle?",
+      "top_sources": [
+        "Anna Karenina",
+        "Inferno",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.4024,
+        0.3998,
+        0.3966
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 1
+    },
+    {
+      "category": "Conflict & struggle",
+      "query": "What might a soldier do in a conflict?",
+      "top_sources": [
+        "Anna Karenina",
+        "Montaigne Essays",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.487,
+        0.484,
+        0.4257
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 2
+    },
+    {
+      "category": "Conflict & struggle",
+      "query": "How can we make a difference in our lives?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Montaigne Essays",
+        "Confessions"
+      ],
+      "top_scores": [
+        0.4336,
+        0.3874,
+        0.3831
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 2
+    },
+    {
+      "category": "Conflict & struggle",
+      "query": "How can we deal with our conflict?",
+      "top_sources": [
+        "Anna Karenina",
+        "Montaigne Essays",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.3665,
+        0.362,
+        0.3571
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 2
+    },
+    {
+      "category": "Conflict & struggle",
+      "query": "What type of relationships do some people have?",
+      "top_sources": [
+        "Anna Karenina",
+        "Anna Karenina",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.3687,
+        0.3444,
+        0.3285
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 3
+    },
+    {
+      "category": "Conflict & struggle",
+      "query": "What is the main issue and why?",
+      "top_sources": [
+        "Anna Karenina",
+        "Montaigne Essays",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.2928,
+        0.2762,
+        0.2671
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 2
+    },
+    {
+      "category": "Conflict & struggle",
+      "query": "How is a person described as a struggler?",
+      "top_sources": [
+        "Anna Karenina",
+        "Anna Karenina",
+        "Confessions"
+      ],
+      "top_scores": [
+        0.4586,
+        0.4359,
+        0.4266
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 2
+    },
+    {
+      "category": "Conflict & struggle",
+      "query": "What is a struggle with personal development?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Montaigne Essays",
+        "Pride and Prejudice"
+      ],
+      "top_scores": [
+        0.3917,
+        0.3789,
+        0.3749
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 2
+    },
+    {
+      "category": "Conflict & struggle",
+      "query": "How can you avoid struggle if you do not fight?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Anna Karenina",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.3539,
+        0.3495,
+        0.342
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 2
+    },
+    {
+      "category": "Conflict & struggle",
+      "query": "What happens when a person is forced to fight for something?",
+      "top_sources": [
+        "Anna Karenina",
+        "Anna Karenina",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.4257,
+        0.4131,
+        0.3983
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 2
+    },
+    {
+      "category": "Conflict & struggle",
+      "query": "What does the human need to survive the conflict?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Confessions",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.3915,
+        0.388,
+        0.3854
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 2
+    },
+    {
+      "category": "Conflict & struggle",
+      "query": "Why do people struggle in their lives?",
+      "top_sources": [
+        "Confessions",
+        "Anna Karenina",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.4751,
+        0.4643,
+        0.4408
+      ],
+      "chosen_source": "Confessions",
+      "chosen_figure": "Augustine",
+      "dominance": 1
+    },
+    {
+      "category": "Conflict & struggle",
+      "query": "What is life without conflict?",
+      "top_sources": [
+        "Anna Karenina",
+        "Confessions",
+        "Confessions"
+      ],
+      "top_scores": [
+        0.4308,
+        0.4178,
+        0.4162
+      ],
+      "chosen_source": "Confessions",
+      "chosen_figure": "Augustine",
+      "dominance": 2
+    },
+    {
+      "category": "Conflict & struggle",
+      "query": "How can conflict be dealt with?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Anna Karenina",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.4171,
+        0.3944,
+        0.3697
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 2
+    },
+    {
+      "category": "Conflict & struggle",
+      "query": "Why is the struggle mentioned above?",
+      "top_sources": [
+        "Anna Karenina",
+        "Montaigne Essays",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.5831,
+        0.5056,
+        0.4977
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 2
+    },
+    {
+      "category": "Conflict & struggle",
+      "query": "How does war affect human beings?",
+      "top_sources": [
+        "Confessions",
+        "Montaigne Essays",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.3571,
+        0.3476,
+        0.3344
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 2
+    },
+    {
+      "category": "Conflict & struggle",
+      "query": "What does conflict lead to?",
+      "top_sources": [
+        "Anna Karenina",
+        "Montaigne Essays",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.4141,
+        0.3885,
+        0.3793
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 2
+    },
+    {
+      "category": "Conflict & struggle",
+      "query": "How does conflict affect your life?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Anna Karenina",
+        "Confessions"
+      ],
+      "top_scores": [
+        0.3888,
+        0.3854,
+        0.3811
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 1
+    },
+    {
+      "category": "Conflict & struggle",
+      "query": "What is a challenge of life itself?",
+      "top_sources": [
+        "Confessions",
+        "Confessions",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.4147,
+        0.4133,
+        0.3885
+      ],
+      "chosen_source": "Confessions",
+      "chosen_figure": "Augustine",
+      "dominance": 2
+    },
+    {
+      "category": "Conflict & struggle",
+      "query": "How can a conflict lead to struggle?",
+      "top_sources": [
+        "Anna Karenina",
+        "Anna Karenina",
+        "Inferno"
+      ],
+      "top_scores": [
+        0.4723,
+        0.4411,
+        0.3968
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 2
+    },
+    {
+      "category": "Conflict & struggle",
+      "query": "What does it mean to struggle with yourself?",
+      "top_sources": [
+        "Pride and Prejudice",
+        "Confessions",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.4299,
+        0.3982,
+        0.3937
+      ],
+      "chosen_source": "Pride and Prejudice",
+      "chosen_figure": "Elizabeth Bennet",
+      "dominance": 1
+    },
+    {
+      "category": "Conflict & struggle",
+      "query": "What are the three basic tenets of conflict?",
+      "top_sources": [
+        "Confessions",
+        "Montaigne Essays",
+        "Confessions"
+      ],
+      "top_scores": [
+        0.4232,
+        0.395,
+        0.3916
+      ],
+      "chosen_source": "Confessions",
+      "chosen_figure": "Augustine",
+      "dominance": 2
+    },
+    {
+      "category": "Conflict & struggle",
+      "query": "How does fighting affect you as a person?",
+      "top_sources": [
+        "Confessions",
+        "Montaigne Essays",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.3344,
+        0.33,
+        0.3214
+      ],
+      "chosen_source": "Confessions",
+      "chosen_figure": "Augustine",
+      "dominance": 1
+    },
+    {
+      "category": "Conflict & struggle",
+      "query": "What is the most important rule of conflict?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Montaigne Essays",
+        "Confessions"
+      ],
+      "top_scores": [
+        0.3707,
+        0.3633,
+        0.3533
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 2
+    },
+    {
+      "category": "Conflict & struggle",
+      "query": "What is the price of caring for the person in a conflict?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Confessions",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.3906,
+        0.3763,
+        0.3494
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 2
+    },
+    {
+      "category": "Conflict & struggle",
+      "query": "How does the struggle between good and evil affect people?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Confessions",
+        "Confessions"
+      ],
+      "top_scores": [
+        0.5187,
+        0.4817,
+        0.464
+      ],
+      "chosen_source": "Confessions",
+      "chosen_figure": "Augustine",
+      "dominance": 2
+    },
+    {
+      "category": "Conflict & struggle",
+      "query": "What is the significance of wars and struggles?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Anna Karenina",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.4317,
+        0.4278,
+        0.4124
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 2
+    },
+    {
+      "category": "Conflict & struggle",
+      "query": "How do we deal with conflicts and struggle?",
+      "top_sources": [
+        "Anna Karenina",
+        "Confessions",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.3983,
+        0.3712,
+        0.3677
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 1
+    },
+    {
+      "category": "Conflict & struggle",
+      "query": "How do you fight a battle we know we will lose?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Anna Karenina",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.3863,
+        0.3725,
+        0.3544
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 2
+    },
+    {
+      "category": "Conflict & struggle",
+      "query": "How can fighting be a struggle for a more healthy and stable life?",
+      "top_sources": [
+        "Confessions",
+        "Anna Karenina",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.4184,
+        0.4174,
+        0.4056
+      ],
+      "chosen_source": "Confessions",
+      "chosen_figure": "Augustine",
+      "dominance": 1
+    },
+    {
+      "category": "Conflict & struggle",
+      "query": "How can we overcome the conflict that inevitably leads us to struggle?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Montaigne Essays",
+        "Confessions"
+      ],
+      "top_scores": [
+        0.4246,
+        0.4026,
+        0.3993
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 2
+    },
+    {
+      "category": "Conflict & struggle",
+      "query": "How can one help themselves to fight with struggle?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Montaigne Essays",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.3701,
+        0.362,
+        0.3563
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 2
+    },
+    {
+      "category": "Conflict & struggle",
+      "query": "Why do children struggle?",
+      "top_sources": [
+        "Anna Karenina",
+        "Anna Karenina",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.4835,
+        0.4313,
+        0.4242
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 3
+    },
+    {
+      "category": "Conflict & struggle",
+      "query": "How can we cope with the conflict that has arisen?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Montaigne Essays",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.3764,
+        0.3684,
+        0.3673
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 3
+    },
+    {
+      "category": "Conflict & struggle",
+      "query": "What is the best way to deal with conflict?",
+      "top_sources": [
+        "Anna Karenina",
+        "Montaigne Essays",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.3941,
+        0.3856,
+        0.3319
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 2
+    },
+    {
+      "category": "Conflict & struggle",
+      "query": "What is the meaning of \" struggle\"?",
+      "top_sources": [
+        "Anna Karenina",
+        "Anna Karenina",
+        "Confessions"
+      ],
+      "top_scores": [
+        0.4843,
+        0.4819,
+        0.4673
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 2
+    },
+    {
+      "category": "Conflict & struggle",
+      "query": "How do you cope with conflict?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Anna Karenina",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.3888,
+        0.3717,
+        0.3477
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 2
+    },
+    {
+      "category": "Conflict & struggle",
+      "query": "Why does conflict lead to struggle?",
+      "top_sources": [
+        "Anna Karenina",
+        "Anna Karenina",
+        "Confessions"
+      ],
+      "top_scores": [
+        0.4538,
+        0.4429,
+        0.4059
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 2
+    },
+    {
+      "category": "Conflict & struggle",
+      "query": "How can someone cope with a struggle in life?",
+      "top_sources": [
+        "Confessions",
+        "Anna Karenina",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.4435,
+        0.3968,
+        0.3941
+      ],
+      "chosen_source": "Confessions",
+      "chosen_figure": "Augustine",
+      "dominance": 1
+    },
+    {
+      "category": "Conflict & struggle",
+      "query": "How can one cope with the loss of a family?",
+      "top_sources": [
+        "Confessions",
+        "Anna Karenina",
+        "Confessions"
+      ],
+      "top_scores": [
+        0.4241,
+        0.3912,
+        0.3841
+      ],
+      "chosen_source": "Confessions",
+      "chosen_figure": "Augustine",
+      "dominance": 2
+    },
+    {
+      "category": "Conflict & struggle",
+      "query": "What are the challenges that face us today?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Montaigne Essays",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.3885,
+        0.3449,
+        0.3205
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 3
+    },
+    {
+      "category": "Conflict & struggle",
+      "query": "Why does struggle feel like a natural process?",
+      "top_sources": [
+        "Anna Karenina",
+        "Anna Karenina",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.4675,
+        0.4493,
+        0.442
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 2
+    },
+    {
+      "category": "Conflict & struggle",
+      "query": "What is the meaning of conflict?",
+      "top_sources": [
+        "Anna Karenina",
+        "Montaigne Essays",
+        "Confessions"
+      ],
+      "top_scores": [
+        0.4424,
+        0.4022,
+        0.4017
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 1
+    },
+    {
+      "category": "Moral / ethical questions",
+      "query": "How do we keep the world from falling apart?",
+      "top_sources": [
+        "Anna Karenina",
+        "Anna Karenina",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.3648,
+        0.3543,
+        0.3514
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 3
+    },
+    {
+      "category": "Moral / ethical questions",
+      "query": "Who is to blame for the harm caused by being a victim of morality?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Confessions",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.42,
+        0.4131,
+        0.4075
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 1
+    },
+    {
+      "category": "Moral / ethical questions",
+      "query": "If we all want to live a long life, what should we be doing about it?",
+      "top_sources": [
+        "Confessions",
+        "Montaigne Essays",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.4521,
+        0.4096,
+        0.3956
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 2
+    },
+    {
+      "category": "Moral / ethical questions",
+      "query": "How can we have honesty?",
+      "top_sources": [
+        "Anna Karenina",
+        "Montaigne Essays",
+        "Pride and Prejudice"
+      ],
+      "top_scores": [
+        0.4043,
+        0.4024,
+        0.3941
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 1
+    },
+    {
+      "category": "Moral / ethical questions",
+      "query": "How do we feel about the things that are considered wrong?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Confessions",
+        "Confessions"
+      ],
+      "top_scores": [
+        0.3776,
+        0.3614,
+        0.3602
+      ],
+      "chosen_source": "Confessions",
+      "chosen_figure": "Augustine",
+      "dominance": 2
+    },
+    {
+      "category": "Moral / ethical questions",
+      "query": "Why does moral questioning lead to more ethical problems?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Anna Karenina",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.3344,
+        0.3225,
+        0.3179
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 2
+    },
+    {
+      "category": "Moral / ethical questions",
+      "query": "How can a person feel about someone’s actions?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Pride and Prejudice",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.4119,
+        0.4057,
+        0.3995
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 1
+    },
+    {
+      "category": "Moral / ethical questions",
+      "query": "How can we change the way things are done to others?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Montaigne Essays",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.4758,
+        0.4163,
+        0.4157
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 3
+    },
+    {
+      "category": "Moral / ethical questions",
+      "query": "What does it mean to treat someone unfairly?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Montaigne Essays",
+        "Pride and Prejudice"
+      ],
+      "top_scores": [
+        0.458,
+        0.4349,
+        0.4296
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 2
+    },
+    {
+      "category": "Moral / ethical questions",
+      "query": "How do we act differently as we move to a new country?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Montaigne Essays",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.3083,
+        0.2879,
+        0.2829
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 2
+    },
+    {
+      "category": "Moral / ethical questions",
+      "query": "When can I be confident that someone else will treat me the way I want to be treated?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Montaigne Essays",
+        "Pride and Prejudice"
+      ],
+      "top_scores": [
+        0.388,
+        0.37,
+        0.3655
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 2
+    },
+    {
+      "category": "Moral / ethical questions",
+      "query": "How can we improve our lives?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Confessions",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.4191,
+        0.4183,
+        0.384
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 1
+    },
+    {
+      "category": "Moral / ethical questions",
+      "query": "How should a person treat others in their daily life?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Montaigne Essays",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.499,
+        0.4329,
+        0.429
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 3
+    },
+    {
+      "category": "Moral / ethical questions",
+      "query": "How do moral questions relate to life itself?",
+      "top_sources": [
+        "Anna Karenina",
+        "Confessions",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.399,
+        0.3865,
+        0.38
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 2
+    },
+    {
+      "category": "Moral / ethical questions",
+      "query": "Why do some people believe that they should have a better life?",
+      "top_sources": [
+        "Anna Karenina",
+        "Montaigne Essays",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.3944,
+        0.3704,
+        0.3642
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 2
+    },
+    {
+      "category": "Moral / ethical questions",
+      "query": "Why does self-respect feel more important than others?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Montaigne Essays",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.5,
+        0.4552,
+        0.4238
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 3
+    },
+    {
+      "category": "Moral / ethical questions",
+      "query": "What happens when we do not have money?",
+      "top_sources": [
+        "Anna Karenina",
+        "Confessions",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.3518,
+        0.3481,
+        0.3327
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 2
+    },
+    {
+      "category": "Moral / ethical questions",
+      "query": "How do moral questions relate to everyday life?",
+      "top_sources": [
+        "Anna Karenina",
+        "Montaigne Essays",
+        "Confessions"
+      ],
+      "top_scores": [
+        0.3622,
+        0.3577,
+        0.344
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 1
+    },
+    {
+      "category": "Moral / ethical questions",
+      "query": "If you feel like you cannot accept what a mother tells you, what should you do?",
+      "top_sources": [
+        "Anna Karenina",
+        "Anna Karenina",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.5393,
+        0.4654,
+        0.4633
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 3
+    },
+    {
+      "category": "Moral / ethical questions",
+      "query": "How does one determine that moral questions are moral?",
+      "top_sources": [
+        "Anna Karenina",
+        "Confessions",
+        "Confessions"
+      ],
+      "top_scores": [
+        0.3196,
+        0.3067,
+        0.3044
+      ],
+      "chosen_source": "Confessions",
+      "chosen_figure": "Augustine",
+      "dominance": 2
+    },
+    {
+      "category": "Moral / ethical questions",
+      "query": "What is the difference between true self-respect and an act truly virtuous?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Montaigne Essays",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.533,
+        0.4461,
+        0.442
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 3
+    },
+    {
+      "category": "Moral / ethical questions",
+      "query": "How can a person think?",
+      "top_sources": [
+        "Confessions",
+        "Anna Karenina",
+        "Confessions"
+      ],
+      "top_scores": [
+        0.4633,
+        0.4104,
+        0.4018
+      ],
+      "chosen_source": "Confessions",
+      "chosen_figure": "Augustine",
+      "dominance": 2
+    },
+    {
+      "category": "Moral / ethical questions",
+      "query": "What are the things we should do in life?",
+      "top_sources": [
+        "Confessions",
+        "Montaigne Essays",
+        "Confessions"
+      ],
+      "top_scores": [
+        0.4051,
+        0.3575,
+        0.3443
+      ],
+      "chosen_source": "Confessions",
+      "chosen_figure": "Augustine",
+      "dominance": 2
+    },
+    {
+      "category": "Moral / ethical questions",
+      "query": "How do we build relationships?",
+      "top_sources": [
+        "Anna Karenina",
+        "Anna Karenina",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.407,
+        0.3682,
+        0.3347
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 3
+    },
+    {
+      "category": "Moral / ethical questions",
+      "query": "What is one way of expressing life's lessons?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Montaigne Essays",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.4362,
+        0.4073,
+        0.4003
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 3
+    },
+    {
+      "category": "Moral / ethical questions",
+      "query": "What is true repentance?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Montaigne Essays",
+        "Confessions"
+      ],
+      "top_scores": [
+        0.5701,
+        0.5422,
+        0.5286
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 2
+    },
+    {
+      "category": "Moral / ethical questions",
+      "query": "What are moral questions that should be addressed in our daily lives?",
+      "top_sources": [
+        "Anna Karenina",
+        "Montaigne Essays",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.3757,
+        0.3553,
+        0.3413
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 2
+    },
+    {
+      "category": "Moral / ethical questions",
+      "query": "Why does a person need to be honest with themselves?",
+      "top_sources": [
+        "Pride and Prejudice",
+        "Anna Karenina",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.4463,
+        0.4364,
+        0.431
+      ],
+      "chosen_source": "Pride and Prejudice",
+      "chosen_figure": "Elizabeth Bennet",
+      "dominance": 1
+    },
+    {
+      "category": "Moral / ethical questions",
+      "query": "What are the benefits and consequences of a bad decision?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Montaigne Essays",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.3344,
+        0.3296,
+        0.3289
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 3
+    },
+    {
+      "category": "Moral / ethical questions",
+      "query": "Why would a person choose to be virtuous?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Montaigne Essays",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.5734,
+        0.5493,
+        0.5377
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 3
+    },
+    {
+      "category": "Moral / ethical questions",
+      "query": "How should compassion temper justice?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Confessions",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.4755,
+        0.4738,
+        0.458
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 2
+    },
+    {
+      "category": "Moral / ethical questions",
+      "query": "Why do people ask us whether we should be proud or humble?",
+      "top_sources": [
+        "Pride and Prejudice",
+        "Pride and Prejudice",
+        "Pride and Prejudice"
+      ],
+      "top_scores": [
+        0.5257,
+        0.4642,
+        0.444
+      ],
+      "chosen_source": "Pride and Prejudice",
+      "chosen_figure": "Elizabeth Bennet",
+      "dominance": 3
+    },
+    {
+      "category": "Moral / ethical questions",
+      "query": "How does a strong believer feel about the value of trust?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Confessions",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.4438,
+        0.4291,
+        0.4174
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 2
+    },
+    {
+      "category": "Moral / ethical questions",
+      "query": "What does being a parent most mean for a child?",
+      "top_sources": [
+        "Pride and Prejudice",
+        "Anna Karenina",
+        "Pride and Prejudice"
+      ],
+      "top_scores": [
+        0.4193,
+        0.4036,
+        0.3771
+      ],
+      "chosen_source": "Pride and Prejudice",
+      "chosen_figure": "Elizabeth Bennet",
+      "dominance": 2
+    },
+    {
+      "category": "Moral / ethical questions",
+      "query": "Which of these ideas does the human mind supposedly possess?",
+      "top_sources": [
+        "Confessions",
+        "Confessions",
+        "Confessions"
+      ],
+      "top_scores": [
+        0.5235,
+        0.5182,
+        0.5071
+      ],
+      "chosen_source": "Confessions",
+      "chosen_figure": "Augustine",
+      "dominance": 3
+    },
+    {
+      "category": "Moral / ethical questions",
+      "query": "How should a sleazy person respond to a problem that's wrong with them?",
+      "top_sources": [
+        "Anna Karenina",
+        "Pride and Prejudice",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.3697,
+        0.3624,
+        0.3206
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 2
+    },
+    {
+      "category": "Moral / ethical questions",
+      "query": "Why is morality and ethics important?",
+      "top_sources": [
+        "Confessions",
+        "Confessions",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.3571,
+        0.3426,
+        0.3421
+      ],
+      "chosen_source": "Confessions",
+      "chosen_figure": "Augustine",
+      "dominance": 2
+    },
+    {
+      "category": "Moral / ethical questions",
+      "query": "What makes us want to live a virtuous life?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Montaigne Essays",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.5415,
+        0.5112,
+        0.5041
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 3
+    },
+    {
+      "category": "Moral / ethical questions",
+      "query": "How can I be an active life citizen?",
+      "top_sources": [
+        "Anna Karenina",
+        "Anna Karenina",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.2942,
+        0.2628,
+        0.2602
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 2
+    },
+    {
+      "category": "Moral / ethical questions",
+      "query": "Why does a person avoid the ill effects of being dead?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Montaigne Essays",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.4981,
+        0.4902,
+        0.4545
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 2
+    },
+    {
+      "category": "Moral / ethical questions",
+      "query": "Why do some believe they are right to be free?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Anna Karenina",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.3938,
+        0.3606,
+        0.3411
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 2
+    },
+    {
+      "category": "Moral / ethical questions",
+      "query": "What is the ideal moral of love?",
+      "top_sources": [
+        "Confessions",
+        "Anna Karenina",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.4758,
+        0.4607,
+        0.4388
+      ],
+      "chosen_source": "Confessions",
+      "chosen_figure": "Augustine",
+      "dominance": 1
+    },
+    {
+      "category": "Moral / ethical questions",
+      "query": "How do you feel about guilt when you want to kill your own soul?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Montaigne Essays",
+        "Confessions"
+      ],
+      "top_scores": [
+        0.4877,
+        0.4801,
+        0.4558
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 2
+    },
+    {
+      "category": "Moral / ethical questions",
+      "query": "What will the power of conscience tell you?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Confessions",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.5309,
+        0.5066,
+        0.5032
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 2
+    },
+    {
+      "category": "Moral / ethical questions",
+      "query": "What are three questions that have nothing to do with morality?",
+      "top_sources": [
+        "Anna Karenina",
+        "Anna Karenina",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.3404,
+        0.3297,
+        0.3276
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 2
+    },
+    {
+      "category": "Moral / ethical questions",
+      "query": "What is life like for a kid, then?",
+      "top_sources": [
+        "Anna Karenina",
+        "Anna Karenina",
+        "Anna Karenina"
+      ],
+      "top_scores": [
+        0.3579,
+        0.3272,
+        0.3235
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 3
+    },
+    {
+      "category": "Moral / ethical questions",
+      "query": "What are the moral dilemmas facing American society?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Anna Karenina",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.3918,
+        0.3737,
+        0.3733
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 2
+    },
+    {
+      "category": "Moral / ethical questions",
+      "query": "What is a good way to know if one is right and wrong?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Confessions",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.3536,
+        0.3457,
+        0.3021
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 2
+    },
+    {
+      "category": "Moral / ethical questions",
+      "query": "What is the most moral question a person might ask their parents about the best way to be a wife?",
+      "top_sources": [
+        "Anna Karenina",
+        "Pride and Prejudice",
+        "Confessions"
+      ],
+      "top_scores": [
+        0.4142,
+        0.407,
+        0.3957
+      ],
+      "chosen_source": "Anna Karenina",
+      "chosen_figure": "Anna Karenina",
+      "dominance": 1
+    },
+    {
+      "category": "Moral / ethical questions",
+      "query": "How can we live wisely in a world that rewards deceit?",
+      "top_sources": [
+        "Montaigne Essays",
+        "Montaigne Essays",
+        "Montaigne Essays"
+      ],
+      "top_scores": [
+        0.5316,
+        0.5214,
+        0.5149
+      ],
+      "chosen_source": "Montaigne Essays",
+      "chosen_figure": "Montaigne",
+      "dominance": 3
+    }
+  ]
+}

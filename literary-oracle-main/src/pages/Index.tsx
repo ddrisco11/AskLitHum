@@ -5,6 +5,7 @@ import LoadingState from "@/components/LoadingState";
 import ResponderCard from "@/components/ResponderCard";
 import AnswerCard from "@/components/AnswerCard";
 import EvidenceSection from "@/components/EvidenceSection";
+import PipelineSignals from "@/components/PipelineSignals";
 import HowItWorks from "@/components/HowItWorks";
 import Footer from "@/components/Footer";
 import type { MockResponse } from "@/lib/mockData";
@@ -112,6 +113,11 @@ const Index = () => {
                 themes={response.themes}
               />
               <EvidenceSection evidence={response.evidence} />
+              <PipelineSignals
+                question={question}
+                pipeline={response.pipeline}
+                citations={response.citations}
+              />
             </div>
           </motion.div>
         )}

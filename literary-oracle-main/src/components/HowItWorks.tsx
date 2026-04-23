@@ -1,10 +1,41 @@
 import OrnamentDivider from "./OrnamentDivider";
 
 const steps = [
-  { number: "I", title: "Pose your question", description: "Ask anything about life, love, loss, or meaning." },
-  { number: "II", title: "Search the canon", description: "The app retrieves the most relevant passages across the Lit Hum texts." },
-  { number: "III", title: "Discover a voice", description: "The strongest literary figure is chosen to respond." },
-  { number: "IV", title: "Receive an answer", description: "A response grounded in textual evidence, in the voice of the canon." },
+  {
+    number: "I",
+    title: "Pose your question",
+    description: "Ask anything about life, love, loss, or meaning.",
+  },
+  {
+    number: "II",
+    title: "Refine the query",
+    description:
+      "IBM Granite's Query Rewrite adapter normalizes your phrasing so the retriever can reach the right passages.",
+  },
+  {
+    number: "III",
+    title: "Search the canon",
+    description:
+      "MiniLM embeddings retrieve candidate passages across five works; Granite's Context Relevance adapter filters them.",
+  },
+  {
+    number: "IV",
+    title: "Discover a voice",
+    description:
+      "The dominant work chooses its speaker — Dante, Augustine, Lear, Elizabeth, Anna, or Montaigne.",
+  },
+  {
+    number: "V",
+    title: "Answer in character",
+    description:
+      "Mistral 7B, running locally through Ollama, writes the response in the chosen voice.",
+  },
+  {
+    number: "VI",
+    title: "Verify and cite",
+    description:
+      "Granite's Hallucination Detection and Citation Generation adapters ground every sentence back to the text.",
+  },
 ];
 
 const HowItWorks = () => (
@@ -16,7 +47,7 @@ const HowItWorks = () => (
         How It Works
       </h3>
       <p className="font-body text-sm text-muted-foreground text-center mb-12">
-        A literary oracle in four steps
+        A literary oracle, grounded in open-source RAG
       </p>
 
       <div className="grid sm:grid-cols-2 gap-8">
