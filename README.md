@@ -6,13 +6,16 @@ A retrieval-augmented literary conversation system for Columbia's Literature Hum
 
 A recorded walkthrough of the live app — real backend, real Ollama, real Mistral generation. Two canonical questions (*"What does it mean to live an authentic life?"* → Montaigne; *"How does love survive disappointment?"* → Anna Karenina). Generation latency is sped ~5× so the whole clip fits under a minute; the answer reveals play at natural speed so you can read.
 
-<video src="https://github.com/ddrisco11/AskLitHum/raw/main/video_output/demo.mp4" controls muted loop poster="video_output/demo_poster.png" width="720">
-  Your browser doesn't support embedded playback — <a href="video_output/demo.mp4">download the MP4</a>.
+https://github.com/ddrisco11/AskLitHum/releases/download/demo-v1/demo.mp4
+
+<p><em>If the embed above doesn't auto-render in your markdown client, use this fallback:</em></p>
+
+<video width="720" controls muted loop playsinline poster="video_output/demo_poster.png">
+  <source src="https://github.com/ddrisco11/AskLitHum/releases/download/demo-v1/demo.mp4" type="video/mp4">
+  <a href="https://github.com/ddrisco11/AskLitHum/releases/download/demo-v1/demo.mp4">Download the MP4</a>
 </video>
 
-[![Ask Lit Hum demo](video_output/demo_poster.png)](https://github.com/ddrisco11/AskLitHum/raw/main/video_output/demo.mp4)
-
-▶ **Watch**: [`video_output/demo.mp4`](video_output/demo.mp4) (1.2 MB, 45s, 1280×800, H.264)
+▶ **Download / direct link**: [demo.mp4 · release demo-v1](https://github.com/ddrisco11/AskLitHum/releases/download/demo-v1/demo.mp4) (1.2 MB · 45 s · 1280×800 H.264)
 
 Recording: [`record_demo.py`](./record_demo.py) — Playwright driving the real UI. Edit: [`edit_demo.py`](./edit_demo.py) — ffmpeg segment cuts, speed ramps, drawtext captions, concat demuxer.
 
