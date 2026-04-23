@@ -4,7 +4,7 @@ A retrieval-augmented literary conversation system for Columbia's Literature Hum
 
 ## Demo
 
-A 37-second recorded walkthrough of the live app — real backend, real Ollama, real Mistral generation. Two canonical questions (*"What does it mean to live an authentic life?"* → Montaigne; *"How does love survive disappointment?"* → Anna Karenina). Generation latency is sped 5× so the whole thing fits under a minute.
+A recorded walkthrough of the live app — real backend, real Ollama, real Mistral generation. Two canonical questions (*"What does it mean to live an authentic life?"* → Montaigne; *"How does love survive disappointment?"* → Anna Karenina).
 
 [![Ask Lit Hum demo](video_output/demo_poster.png)](video_output/demo.mp4)
 
