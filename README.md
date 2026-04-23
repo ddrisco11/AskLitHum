@@ -198,5 +198,5 @@ Bold = category winner.
 - `flan-t5-base` queries are grammatical but sometimes generic ("What do we know about relationships?") or faintly modern ("How do we keep the world from falling apart?"). These do not degrade the routing study — MiniLM matches on meaning, not register — but they should be read as a stress-test distribution, not as real Lit Hum student prompts.
 - The study measures *routing only*. Answer quality, hallucination rate, and citation fidelity are evaluated elsewhere (HD + CG stages) and are not part of this number.
 
-CITATION:
+**CITATION:
 Code and README.md co-authored by Claude Code as reflected in the version control
