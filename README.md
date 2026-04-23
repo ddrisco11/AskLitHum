@@ -1,6 +1,6 @@
 # Ask Lit Hum
 
-A retrieval-augmented literary conversation system for Columbia's Literature Humanities core syllabus. Pose a thematic question; a speaker is chosen from the dominant source among the top retrieved passages and answers in character, grounded only in the text.
+A retrieval-augmented literary conversation system for Columbia's Literature Humanities core curriculum. Pose a thematic question; a speaker is chosen from the dominant source among the top retrieved passages and answers in character, grounded only in the text.
 
 The project pairs a classical RAG stack (MiniLM embeddings + cosine retrieval + Mistral generation) with IBM's **Granite** adapter suite for post-generation auditing — hallucination scoring and per-span citation — so every answer is not just in-character but traceable back to the text.
 
