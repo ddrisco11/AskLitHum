@@ -171,10 +171,11 @@ def main():
         "Retrieving · scoring · generating...", caption_style="banner",
     )
 
-    # ---- 5. Q1 answer reveal (response -> scroll_done) mild speedup ----
+    # ---- 5. Q1 answer reveal (response -> scroll_done) — natural speed so
+    # the viewer can actually read the answer as it scrolls. ----
     ans1 = TMP / "05_ans1.mp4"
     cut_segment(
-        ans1, s0["response_received"] - 0.2, s0["scroll_done"], 1.4,
+        ans1, s0["response_received"] - 0.2, s0["scroll_done"] + 0.5, 0.9,
         "Montaigne answers — from the Essays",
     )
 
@@ -192,10 +193,10 @@ def main():
         "Retrieving · scoring · generating...", caption_style="banner",
     )
 
-    # ---- 8. Q2 answer reveal ----
+    # ---- 8. Q2 answer reveal — natural speed. ----
     ans2 = TMP / "08_ans2.mp4"
     cut_segment(
-        ans2, s1["response_received"] - 0.2, s1["scroll_done"], 1.4,
+        ans2, s1["response_received"] - 0.2, s1["scroll_done"] + 0.5, 0.9,
         "Anna Karenina answers — from Tolstoy's novel",
     )
 

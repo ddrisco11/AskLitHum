@@ -4,11 +4,15 @@ A retrieval-augmented literary conversation system for Columbia's Literature Hum
 
 ## Demo
 
-A recorded walkthrough of the live app — real backend, real Ollama, real Mistral generation. Two canonical questions (*"What does it mean to live an authentic life?"* → Montaigne; *"How does love survive disappointment?"* → Anna Karenina).
+A recorded walkthrough of the live app — real backend, real Ollama, real Mistral generation. Two canonical questions (*"What does it mean to live an authentic life?"* → Montaigne; *"How does love survive disappointment?"* → Anna Karenina). Generation latency is sped ~5× so the whole clip fits under a minute; the answer reveals play at natural speed so you can read.
 
-[![Ask Lit Hum demo](video_output/demo_poster.png)](video_output/demo.mp4)
+<video src="https://github.com/ddrisco11/AskLitHum/raw/main/video_output/demo.mp4" controls muted loop poster="video_output/demo_poster.png" width="720">
+  Your browser doesn't support embedded playback — <a href="video_output/demo.mp4">download the MP4</a>.
+</video>
 
-▶ **Watch**: [`video_output/demo.mp4`](video_output/demo.mp4) (1.1 MB, 1280×800, H.264)
+[![Ask Lit Hum demo](video_output/demo_poster.png)](https://github.com/ddrisco11/AskLitHum/raw/main/video_output/demo.mp4)
+
+▶ **Watch**: [`video_output/demo.mp4`](video_output/demo.mp4) (1.2 MB, 45s, 1280×800, H.264)
 
 Recording: [`record_demo.py`](./record_demo.py) — Playwright driving the real UI. Edit: [`edit_demo.py`](./edit_demo.py) — ffmpeg segment cuts, speed ramps, drawtext captions, concat demuxer.
 
