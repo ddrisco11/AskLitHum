@@ -9,3 +9,9 @@ venv/
 *.log
 test_e2e.stdout
 test_e2e_q1.json
+
+# demo scratch (raw recording + per-segment intermediates, final kept)
+video_raw/
+video_tmp/
+video_frames/
+video_check/

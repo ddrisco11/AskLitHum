@@ -2,6 +2,16 @@
 
 A retrieval-augmented literary conversation system for Columbia's Literature Humanities core curriculum. Pose a thematic question; a speaker is chosen from the dominant source among the top retrieved passages and answers in character, grounded only in the text.
 
+## Demo
+
+A 37-second recorded walkthrough of the live app — real backend, real Ollama, real Mistral generation. Two canonical questions (*"What does it mean to live an authentic life?"* → Montaigne; *"How does love survive disappointment?"* → Anna Karenina). Generation latency is sped 5× so the whole thing fits under a minute.
+
+[![Ask Lit Hum demo](video_output/demo_poster.png)](video_output/demo.mp4)
+
+▶ **Watch**: [`video_output/demo.mp4`](video_output/demo.mp4) (1.1 MB, 1280×800, H.264)
+
+Recording: [`record_demo.py`](./record_demo.py) — Playwright driving the real UI. Edit: [`edit_demo.py`](./edit_demo.py) — ffmpeg segment cuts, speed ramps, drawtext captions, concat demuxer.
+
 The project pairs a classical RAG stack (MiniLM embeddings + cosine retrieval + Mistral generation) with IBM's **Granite** adapter suite for post-generation auditing — hallucination scoring and per-span citation — so every answer is not just in-character but traceable back to the text.
 
 ---
