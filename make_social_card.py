@@ -1,92 +1,79 @@
-from PIL import Image, ImageDraw, ImageFilter, ImageFont
+from PIL import Image, ImageDraw, ImageFont
 from pathlib import Path
 
 W, H = 1280, 640
 OUT = Path("Visuals/social_preview.png")
 
-def font(size, bold=False):
-    candidates = [
-        "/System/Library/Fonts/Supplemental/Georgia Bold.ttf" if bold else "/System/Library/Fonts/Supplemental/Georgia.ttf",
-        "/System/Library/Fonts/Helvetica.ttc",
-    ]
-    for p in candidates:
+BG = (13, 17, 23)          # GitHub dark
+FG = (230, 237, 243)       # primary text
+MUTED = (139, 148, 158)    # secondary text
+ACCENT = (88, 166, 255)    # GitHub link blue
+
+def font(size, weight="regular"):
+    paths = {
+        "bold": [
+            "/System/Library/Fonts/Helvetica.ttc",
+            "/System/Library/Fonts/Supplemental/Arial Bold.ttf",
+        ],
+        "regular": [
+            "/System/Library/Fonts/Helvetica.ttc",
+            "/System/Library/Fonts/Supplemental/Arial.ttf",
+        ],
+        "mono": [
+            "/System/Library/Fonts/Menlo.ttc",
+            "/System/Library/Fonts/Monaco.ttf",
+        ],
+    }
+    idx = 1 if weight == "bold" else 0
+    for p in paths[weight]:
         try:
-            return ImageFont.truetype(p, size)
+            return ImageFont.truetype(p, size, index=idx if p.endswith(".ttc") else 0)
         except Exception:
-            continue
+            try:
+                return ImageFont.truetype(p, size)
+            except Exception:
+                continue
     return ImageFont.load_default()
 
-# Vertical gradient: deep navy -> burgundy
-img = Image.new("RGB", (W, H), (20, 24, 48))
-px = img.load()
-top = (18, 22, 46)
-bot = (78, 22, 38)
-for y in range(H):
-    t = y / (H - 1)
-    r = int(top[0] * (1 - t) + bot[0] * t)
-    g = int(top[1] * (1 - t) + bot[1] * t)
-    b = int(top[2] * (1 - t) + bot[2] * t)
-    for x in range(W):
-        px[x, y] = (r, g, b)
-
-# Soft gold radial glow center-left
-glow = Image.new("RGB", (W, H), (0, 0, 0))
-gd = ImageDraw.Draw(glow)
-cx, cy = 360, 320
-for r in range(420, 0, -8):
-    a = int(60 * (1 - r / 420))
-    gd.ellipse((cx - r, cy - r, cx + r, cy + r), fill=(a, int(a*0.85), int(a*0.45)))
-glow = glow.filter(ImageFilter.GaussianBlur(40))
-img = Image.blend(img, Image.eval(glow, lambda v: min(255, v)), 0.6)
-# Re-apply by adding glow
-base = img.convert("RGB")
-img = Image.new("RGB", (W, H))
-bp = base.load()
-gp = glow.load()
-op = img.load()
-for y in range(H):
-    for x in range(W):
-        br, bg, bb = bp[x, y]
-        gr, gg, gbl = gp[x, y]
-        op[x, y] = (min(255, br + gr), min(255, bg + gg), min(255, bb + gbl))
-
+img = Image.new("RGB", (W, H), BG)
 draw = ImageDraw.Draw(img)
 
-# Decorative side bar (gold)
-draw.rectangle((60, 80, 70, H - 80), fill=(212, 175, 55))
+PAD = 80
 
-# Eyebrow
-draw.text((100, 90), "COLUMBIA  ·  LITERATURE HUMANITIES", font=font(22, bold=True), fill=(212, 175, 55))
+# Owner pill (top)
+owner = "ddrisco11 / AskLitHum"
+draw.text((PAD, PAD), owner, font=font(28, "mono"), fill=MUTED)
 
 # Title
-draw.text((100, 140), "Ask Lit Hum", font=font(120, bold=True), fill=(245, 240, 225))
+title = "Ask Lit Hum"
+draw.text((PAD, PAD + 70), title, font=font(112, "bold"), fill=FG)
 
-# Subtitle
-sub = "A retrieval-augmented literary conversation system."
-draw.text((100, 290), sub, font=font(34), fill=(225, 220, 205))
+# Description (wrapped manually, two lines max)
+desc_l1 = "A retrieval-augmented literary conversation system for"
+desc_l2 = "Columbia's Literature Humanities core curriculum."
+draw.text((PAD, PAD + 230), desc_l1, font=font(34, "regular"), fill=MUTED)
+draw.text((PAD, PAD + 278), desc_l2, font=font(34, "regular"), fill=MUTED)
 
-# Tagline lines
-draw.text((100, 350), "Ask a thematic question.", font=font(28), fill=(200, 195, 180))
-draw.text((100, 388), "A speaker emerges from the text — and answers in character.", font=font(28), fill=(200, 195, 180))
+# Divider
+draw.line((PAD, H - 170, W - PAD, H - 170), fill=(48, 54, 61), width=2)
 
-# Stack chips
-chips = ["MiniLM", "Mistral 7B", "IBM Granite", "Ollama", "RAG"]
-x = 100
-y = 470
-for c in chips:
-    tw = draw.textlength(c, font=font(24, bold=True))
-    pad = 18
-    draw.rounded_rectangle((x, y, x + tw + pad * 2, y + 48), radius=24, fill=(255, 255, 255, 30), outline=(212, 175, 55), width=2)
-    draw.text((x + pad, y + 8), c, font=font(24, bold=True), fill=(245, 240, 225))
-    x += tw + pad * 2 + 14
+# Stack labels (bottom row)
+items = ["Python", "MiniLM + Mistral", "IBM Granite"]
+y = H - 130
+x = PAD
+sep = "  ·  "
+for i, it in enumerate(items):
+    draw.text((x, y), it, font=font(26, "regular"), fill=FG)
+    x += int(draw.textlength(it, font=font(26, "regular")))
+    if i < len(items) - 1:
+        draw.text((x, y), sep, font=font(26, "regular"), fill=MUTED)
+        x += int(draw.textlength(sep, font=font(26, "regular")))
 
-# Bottom-right attribution
+# URL bottom-right
 url = "github.com/ddrisco11/AskLitHum"
-tw = draw.textlength(url, font=font(24, bold=True))
-draw.text((W - tw - 70, H - 60), url, font=font(24, bold=True), fill=(212, 175, 55))
-
-# Decorative quote mark
-draw.text((W - 280, 80), "“", font=font(360, bold=True), fill=(212, 175, 55, 80))
+url_f = font(24, "mono")
+tw = draw.textlength(url, font=url_f)
+draw.text((W - PAD - tw, y + 4), url, font=url_f, fill=ACCENT)
 
 OUT.parent.mkdir(parents=True, exist_ok=True)
 img.save(OUT, "PNG", optimize=True)
