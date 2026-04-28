@@ -1,5 +1,13 @@
 # Ask Lit Hum
 
+[![Demo](https://img.shields.io/badge/demo-mp4-red?logo=youtube)](https://github.com/ddrisco11/AskLitHum/releases/download/demo-v1/demo.mp4)
+[![Python](https://img.shields.io/badge/python-3.11-blue?logo=python&logoColor=white)](https://www.python.org/)
+[![RAG](https://img.shields.io/badge/RAG-MiniLM%20%2B%20Mistral-8A2BE2)](#pipeline)
+[![Granite](https://img.shields.io/badge/IBM-Granite%20adapters-052FAD?logo=ibm&logoColor=white)](https://www.ibm.com/granite)
+[![Ollama](https://img.shields.io/badge/Ollama-local-000000)](https://ollama.com/)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](#license)
+[![Course](https://img.shields.io/badge/Columbia-Lit%20Hum-9BCBEB)](https://www.college.columbia.edu/core/lithum)
+
 A retrieval-augmented literary conversation system for Columbia's Literature Humanities core curriculum. Pose a thematic question; a speaker is chosen from the dominant source among the top retrieved passages and answers in character, grounded only in the text.
 
 ## Demo
