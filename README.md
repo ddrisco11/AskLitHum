@@ -125,7 +125,20 @@ The loader extracts each by matching its heading and scanning until the next cha
 
 ---
 
-## Setup and run
+## Run in GitHub Codespaces
+
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/ddrisco11/AskLitHum)
+
+The repo ships a devcontainer (`.devcontainer/`) that installs Python deps, Node deps, Ollama, and pulls `mistral:7b-instruct-q4_0` on first creation. Pick a **4‑core / 16 GB** machine; CPU generation is slow but works. Once the Codespace is ready:
+
+```bash
+python app.py                                   # API on :5001
+( cd literary-oracle-main && npm run dev )      # UI  on :3000 (auto-forwarded)
+```
+
+---
+
+## Setup and run (local)
 
 ```bash
 # 1. Python environment

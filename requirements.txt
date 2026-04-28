@@ -1,0 +1,9 @@
+flask>=3.0
+python-dotenv>=1.0
+numpy>=1.26
+scikit-learn>=1.4
+sentence-transformers>=2.7
+transformers>=4.40
+beautifulsoup4>=4.12
+ollama>=0.3
+mellea>=0.1
