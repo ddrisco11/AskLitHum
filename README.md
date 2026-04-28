@@ -174,12 +174,12 @@ Script: [`simulate.py`](./simulate.py). Raw results: [`simulation_results.json`]
 
 | Category | Dante | Augustine | E. Bennet | Lear | A. Karenina | Montaigne |
 | :------- | ----: | --------: | --------: | ---: | ----------: | --------: |
-| Human condition & identity | 1 | 11 | 2 | 0 | 10 | **26** |
-| Social & cultural structures | 0 | 6 | 3 | 0 | 17 | **24** |
-| Existential / philosophical | 0 | **24** | 0 | 0 | 12 | 14 |
-| Interpersonal relationships | 0 | 5 | 8 | 0 | **23** | 14 |
-| Conflict & struggle | 0 | 11 | 1 | 0 | **22** | 16 |
-| Moral / ethical questions | 0 | 7 | 3 | 0 | 15 | **25** |
+| Human condition & identity | 2% | 22% | 4% | 0% | 20% | **52%** |
+| Social & cultural structures | 0% | 12% | 6% | 0% | 34% | **48%** |
+| Existential / philosophical | 0% | **48%** | 0% | 0% | 24% | 28% |
+| Interpersonal relationships | 0% | 10% | 16% | 0% | **46%** | 28% |
+| Conflict & struggle | 0% | 22% | 2% | 0% | **44%** | 32% |
+| Moral / ethical questions | 0% | 14% | 6% | 0% | 30% | **50%** |
 
 Bold = category winner.
 
