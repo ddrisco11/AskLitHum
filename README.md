@@ -204,16 +204,6 @@ Script: [`simulate.py`](./simulate.py). Raw results: [`simulation_results.json`]
 
 Bold = category winner.
 
-### Observations
-
-- **Category winners line up with each work's actual concerns.** Augustine takes philosophical/existential questions (24/50); Anna Karenina takes interpersonal relationships (23/50) and conflict & struggle (22/50); Montaigne takes human condition/identity (26/50), social structures (24/50), and moral/ethical reflection (25/50). This is the retrieval doing the right thing: the *Confessions* genuinely is a philosophical interrogation, Tolstoy genuinely is the novelist of marriage and strife, and Montaigne genuinely is the essayist of the examined self.
-
-- **Corpus size is a thumb on the scale.** Anna Karenina contributes 49.5% of all chunks but only 33% of routing decisions, so size alone doesn't explain the result — but King Lear (3.8% of chunks) and *Inferno* (5.6%) almost never win. A larger `TOP_K`, stratified retrieval, or per-work weighting would rebalance this if desired.
-
-- **Dante and Lear are nearly invisible in this regime.** Translated verse and Shakespearean stage-speech embed into corners of the MiniLM space that broad thematic English queries rarely reach. For Lear especially, vocabulary like "wretched", "filial", "bastard", "storm" is where queries would need to land to surface him. The easiest fix is concrete query language (or a QR rewrite stage that expands abstractions into the speaker's idiom).
-
-- **Ambiguity is real but not crippling.** 13.3% of queries produce a 3-way split in top-K. Top-1 mean cosine of 0.415 is respectable for thematic RAG; the long tail of near-tie decisions suggests the routing would benefit from a small margin threshold before committing to a speaker.
-
 ### Caveats
 
 - `flan-t5-base` queries are grammatical but sometimes generic ("What do we know about relationships?") or faintly modern ("How do we keep the world from falling apart?"). These do not degrade the routing study — MiniLM matches on meaning, not register — but they should be read as a stress-test distribution, not as real Lit Hum student prompts.
