@@ -167,7 +167,7 @@ def main():
     # ---- 4. generation Q1 sped up ----
     gen1 = TMP / "04_gen1.mp4"
     cut_segment(
-        gen1, s0["submit"] + 0.3, s0["response_received"] - 0.2, 5.5,
+        gen1, s0["submit"] + 0.3, s0["response_received"] - 0.2, 6.0,
         "Retrieving · scoring · generating...", caption_style="banner",
     )
 
@@ -188,7 +188,7 @@ def main():
     # ---- 7. generation Q2 sped ----
     gen2 = TMP / "07_gen2.mp4"
     cut_segment(
-        gen2, s1["submit"] + 0.3, s1["response_received"] - 0.2, 5.0,
+        gen2, s1["submit"] + 0.3, s1["response_received"] - 0.2, 10.0,
         "Retrieving · scoring · generating...", caption_style="banner",
     )
 
@@ -209,7 +209,7 @@ def main():
     # ---- 10. generation Q3 sped ----
     gen3 = TMP / "10_gen3.mp4"
     cut_segment(
-        gen3, s2["submit"] + 0.3, s2["response_received"] - 0.2, 5.0,
+        gen3, s2["submit"] + 0.3, s2["response_received"] - 0.2, 9.0,
         "Retrieving · scoring · generating...", caption_style="banner",
     )
 
