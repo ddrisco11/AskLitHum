@@ -141,7 +141,7 @@ def concat_demux(segments: list[pathlib.Path], out: pathlib.Path):
 
 def main():
     segs = TIMING["segments"]
-    s0, s1 = segs[0], segs[1]
+    s0, s1, s2 = segs[0], segs[1], segs[2]
     hero_end = TIMING["hero_ready"]
 
     # ---- 1. title card (3s) ----
@@ -157,33 +157,32 @@ def main():
     hero = TMP / "02_hero.mp4"
     cut_segment(hero, 0.0, s0["typing_start"], 1.0, None)
 
-    # ---- 3. typing Q1 (typing_start -> submit + 0.8s) ----
+    # ---- 3. typing Q1 ----
     type1 = TMP / "03_type1.mp4"
     cut_segment(
         type1, s0["typing_start"], s0["submit"] + 0.3, 1.0,
-        'I. "What does it mean to live an authentic life?"',
+        'I. "Should I skip LitHum class?"',
     )
 
-    # ---- 4. generation Q1 (submit -> response) sped up ----
+    # ---- 4. generation Q1 sped up ----
     gen1 = TMP / "04_gen1.mp4"
     cut_segment(
         gen1, s0["submit"] + 0.3, s0["response_received"] - 0.2, 5.5,
         "Retrieving · scoring · generating...", caption_style="banner",
     )
 
-    # ---- 5. Q1 answer reveal (response -> scroll_done) — natural speed so
-    # the viewer can actually read the answer as it scrolls. ----
+    # ---- 5. Q1 answer reveal ----
     ans1 = TMP / "05_ans1.mp4"
     cut_segment(
         ans1, s0["response_received"] - 0.2, s0["scroll_done"] + 0.5, 0.9,
-        "Montaigne answers — from the Essays",
+        "The canon responds",
     )
 
-    # ---- 6. typing Q2 (reset + typing) ----
+    # ---- 6. typing Q2 ----
     type2 = TMP / "06_type2.mp4"
     cut_segment(
         type2, s1["typing_start"] + 0.3, s1["submit"] + 0.3, 1.0,
-        'II. "How does love survive disappointment?"',
+        'II. "How do I make the most of my time in school?"',
     )
 
     # ---- 7. generation Q2 sped ----
@@ -193,15 +192,36 @@ def main():
         "Retrieving · scoring · generating...", caption_style="banner",
     )
 
-    # ---- 8. Q2 answer reveal — natural speed. ----
+    # ---- 8. Q2 answer reveal ----
     ans2 = TMP / "08_ans2.mp4"
     cut_segment(
         ans2, s1["response_received"] - 0.2, s1["scroll_done"] + 0.5, 0.9,
-        "Anna Karenina answers — from Tolstoy's novel",
+        "The canon responds",
     )
 
-    # ---- 9. end card ----
-    end = TMP / "09_end.mp4"
+    # ---- 9. typing Q3 ----
+    type3 = TMP / "09_type3.mp4"
+    cut_segment(
+        type3, s2["typing_start"] + 0.3, s2["submit"] + 0.3, 1.0,
+        'III. "I took someone’s laundry out of the dryer, will I go to hell?"',
+    )
+
+    # ---- 10. generation Q3 sped ----
+    gen3 = TMP / "10_gen3.mp4"
+    cut_segment(
+        gen3, s2["submit"] + 0.3, s2["response_received"] - 0.2, 5.0,
+        "Retrieving · scoring · generating...", caption_style="banner",
+    )
+
+    # ---- 11. Q3 answer reveal ----
+    ans3 = TMP / "11_ans3.mp4"
+    cut_segment(
+        ans3, s2["response_received"] - 0.2, s2["scroll_done"] + 0.5, 0.9,
+        "The canon responds",
+    )
+
+    # ---- 12. end card ----
+    end = TMP / "12_end.mp4"
     make_card(
         end, 3.5,
         "All answers grounded in text.",
@@ -209,7 +229,7 @@ def main():
         footer="github.com/ddrisco11/AskLitHum",
     )
 
-    segments = [title, hero, type1, gen1, ans1, type2, gen2, ans2, end]
+    segments = [title, hero, type1, gen1, ans1, type2, gen2, ans2, type3, gen3, ans3, end]
     final = OUT / "demo.mp4"
     concat_demux(segments, final)
 

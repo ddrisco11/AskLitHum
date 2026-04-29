@@ -25,8 +25,9 @@ OUT = HERE / "video_raw"
 OUT.mkdir(exist_ok=True)
 
 QUESTIONS = [
-    "What does it mean to live an authentic life?",
-    "How does love survive disappointment?",
+    "Should I skip LitHum class?",
+    "How do I make the most of my time in school?",
+    "I took someones laundry out of the dryer, will I go to hell?",
 ]
 
 VIEWPORT = {"width": 1280, "height": 800}
