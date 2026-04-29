@@ -36,7 +36,7 @@ CHUNKS_PATH = BASE / "chunks.json"
 EMBEDDINGS_PATH = BASE / "embeddings.npy"
 
 # Retrieval knobs
-RETRIEVE_N = 6      # pre-filter pool (smaller = less Granite memory contention)
+RETRIEVE_N = 12     # pre-filter pool: large enough that after speaker-source filtering we still have TOP_K passages
 TOP_K = 3           # passages shown to the generator (smaller prompt = faster gen)
 CR_KEEP_THRESHOLD = 0.05  # soft floor (unused; CR is display-only when enabled)
 
@@ -337,8 +337,13 @@ def ask():
         if not pool:
             return jsonify({"error": "No passages retrieved."}), 200
 
-        # Top-K by cosine is our generator input.
-        passages = pool[:TOP_K]
+        # Pick speaker from the unfiltered top-K (dominant source wins),
+        # then restrict passages to that speaker's source so the prompt and
+        # displayed evidence are homogeneous — Anna Karenina never quotes
+        # Montaigne, etc.
+        responder = pick_responder(pool[:TOP_K])
+        same_source = [p for p in pool if p["source"] == responder["_source_key"]]
+        passages = same_source[:TOP_K]
 
         # 3. CR — score top-K passages for display (not as a filter: Granite's CR
         # treats "relevance" as factual QA match, which under-scores thematic
@@ -358,8 +363,7 @@ def ask():
         else:
             ans_score = 1.0
 
-        # 5. Persona selection + Mistral generation
-        responder = pick_responder(passages)
+        # 5. Mistral generation (responder already chosen above)
         llm_data = generate_with_mistral(rewritten, passages, responder)
         answer = llm_data.get("answer", "")
         themes = llm_data.get("themes", [])
