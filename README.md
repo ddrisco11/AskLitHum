@@ -12,7 +12,7 @@ A retrieval-augmented literary conversation system for Columbia's Literature Hum
 
 ## Demo
 
-A recorded walkthrough of the live app — real backend, real Ollama, real Mistral generation. Two canonical questions (*"What does it mean to live an authentic life?"* → Montaigne; *"How does love survive disappointment?"* → Anna Karenina).
+A recorded walkthrough of the live app — real backend, real Ollama, real Mistral generation. Three student-facing questions: *"Should I skip LitHum class?"*, *"How do I make the most of my time in school?"*, and *"I took someone's laundry out of the dryer, will I go to hell?"* — each routed to the canon and answered in character.
 
 https://github.com/ddrisco11/AskLitHum/releases/download/demo-v1/demo.mp4
 
@@ -23,7 +23,7 @@ https://github.com/ddrisco11/AskLitHum/releases/download/demo-v1/demo.mp4
   <a href="https://github.com/ddrisco11/AskLitHum/releases/download/demo-v1/demo.mp4">Download the MP4</a>
 </video>
 
-▶ **Download / direct link**: [demo.mp4 · release demo-v1](https://github.com/ddrisco11/AskLitHum/releases/download/demo-v1/demo.mp4) (1.2 MB · 45 s · 1280×800 H.264)
+▶ **Download / direct link**: [demo.mp4 · release demo-v1](https://github.com/ddrisco11/AskLitHum/releases/download/demo-v1/demo.mp4) (1.8 MB · 66 s · 1280×800 H.264)
 
 Recording: [`record_demo.py`](./record_demo.py) — Playwright driving the real UI. Edit: [`edit_demo.py`](./edit_demo.py) — ffmpeg segment cuts, speed ramps, drawtext captions, concat demuxer.
 
